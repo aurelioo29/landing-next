@@ -1,5 +1,9 @@
+import Contact from "@/components/section/Contact";
+import Faq from "@/components/section/Faq";
 import Hero from "@/components/section/Hero";
-import { Box } from "@chakra-ui/react";
+import Sidebar from "@/components/section/Sidebar";
+import TimePrice from "@/components/section/TimePrice";
+import { Box, Flex } from "@chakra-ui/react";
 import Head from "next/head";
 
 export default function Home() {
@@ -11,7 +15,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/favicon.png" />
       </Head>
-      <Box></Box>
+
+      <Hero />
+
+      <Flex p={20}>
+        <Sidebar />
+        <Box flex="1" pl={10}>
+          <Box>
+            <TimePrice />
+            <Faq />
+          </Box>
+        </Box>
+      </Flex>
+
+      <Contact />
     </>
   );
 }
