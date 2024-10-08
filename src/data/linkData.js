@@ -1,8 +1,8 @@
 export const linksData = [
-  { href: "#", label: "Method of Delivery" },
-  { href: "#", label: "Technical Requirements" },
-  { href: "#", label: "Kurikulum" },
-  { href: "#methodstudy", label: "Journey Program" },
+  { href: "#mainProgram", label: "Our Program" },
+  { href: "#method", label: "Method of Delivery" },
+  { href: "#journey", label: "Journey Program" },
+  { href: "#kurikulum", label: "Kurikulum" },
   { href: "#timeprice", label: "Jadwal & Biaya" },
   { href: "#faq", label: "FAQ" },
 ];
