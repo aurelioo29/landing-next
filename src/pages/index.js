@@ -1,10 +1,15 @@
 import Contact from "@/components/section/Contact";
+import Curriculum from "@/components/section/Curiculum";
 import Faq from "@/components/section/Faq";
 import Hero from "@/components/section/Hero";
 import Sidebar from "@/components/section/Sidebar";
 import TimePrice from "@/components/section/TimePrice";
 import { Box, Flex } from "@chakra-ui/react";
 import Head from "next/head";
+import { journeyData } from "@/data/journeyData";
+import JourneySteps from "@/components/section/JourneyProgram";
+import ProgramCards from "@/components/section/MainProgram";
+import MethodDelivery from "@/components/section/MethodDelivery";
 
 export default function Home() {
   return (
@@ -16,11 +21,17 @@ export default function Home() {
         <link rel="icon" href="/assets/favicon.png" />
       </Head>
       <Hero />
-      <Flex p={20}>
+      <Flex p={"36"}>
         <Sidebar />
         <Box flex="1" pl={10}>
-          <Box>
-            <TimePrice />
+          <Box id="program-cards">
+            <ProgramCards />
+          </Box>
+          <MethodDelivery />
+          <JourneySteps data={journeyData} />
+          <Curriculum />
+          <TimePrice />
+          <Box id="faq-section">
             <Faq />
           </Box>
         </Box>
