@@ -18,8 +18,8 @@ function FAQ() {
   const visibleFAQs = showMore ? faqs : faqs.slice(0, 3);
 
   return (
-    <Box id="faq" py={10} bg="white" mb="20">
-      <Box maxW="auto" px={4}>
+    <Box id="faq" py={10} bg="white" mb="10">
+      <Box maxW="container.md" px={4} mx="auto">
         <Heading as="h2" size="xl" mb={8} color="black" textAlign="left">
           Frequently Asked Questions (FAQ)
         </Heading>
@@ -41,8 +41,15 @@ function FAQ() {
                 py={4}
                 bg="white"
                 _hover={{ bg: "gray.50" }}
+                flexDirection={{ base: "column", md: "row" }} // Adjust layout for smaller screens
               >
-                <Text fontWeight="bold" fontSize="lg" textAlign="left" flex="1">
+                <Text
+                  fontWeight="bold"
+                  fontSize={{ base: "md", md: "lg" }} // Responsive font sizes
+                  textAlign="left"
+                  flex="1"
+                  mb={{ base: 2, md: 0 }} // Margin-bottom for mobile view
+                >
                   {faq.question}
                 </Text>
                 <Icon
@@ -57,7 +64,11 @@ function FAQ() {
                 startingHeight={0}
                 transition="all 0.3s ease-in-out"
               >
-                <Box p={4} textColor="gray.600" fontSize="md">
+                <Box
+                  p={4}
+                  textColor="gray.600"
+                  fontSize={{ base: "sm", md: "md" }}
+                >
                   <Text>{faq.answer}</Text>
                 </Box>
               </Collapse>
