@@ -15,9 +15,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/favicon.png" />
       </Head>
-
       <Hero />
-
       <Flex p={20}>
         <Sidebar />
         <Box flex="1" pl={10}>
@@ -27,7 +25,6 @@ export default function Home() {
           </Box>
         </Box>
       </Flex>
-
       <Contact />
     </>
   );

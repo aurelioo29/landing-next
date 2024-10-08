@@ -1,5 +1,4 @@
-import { Box, Flex, Link, Input, Button, Icon } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Flex, Link, Input, Button, Icon, Image } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
 
 export default function Navbar() {
