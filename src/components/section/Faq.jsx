@@ -19,8 +19,14 @@ function FAQ() {
 
   return (
     <Box id="faq" py={10} bg="white" mb="10">
-      <Box maxW="container.md" px={4} mx="auto">
-        <Heading as="h2" size="xl" mb={8} color="black" textAlign="left">
+      <Box px={4} mx="auto">
+        <Heading
+          as="h2"
+          size="xl"
+          mb={8}
+          color="black"
+          textAlign={{ base: "center", md: "left" }}
+        >
           Frequently Asked Questions (FAQ)
         </Heading>
 
@@ -41,21 +47,21 @@ function FAQ() {
                 py={4}
                 bg="white"
                 _hover={{ bg: "gray.50" }}
-                flexDirection={{ base: "column", md: "row" }} // Adjust layout for smaller screens
+                flexDirection={{ base: "column", md: "row" }}
               >
                 <Text
                   fontWeight="bold"
-                  fontSize={{ base: "md", md: "lg" }} // Responsive font sizes
-                  textAlign="left"
+                  fontSize={{ base: "md", md: "lg" }}
+                  textAlign={{ base: "center", md: "left" }}
                   flex="1"
-                  mb={{ base: 2, md: 0 }} // Margin-bottom for mobile view
+                  mb={{ base: 2, md: 0 }}
                 >
                   {faq.question}
                 </Text>
                 <Icon
                   as={activeIndex === index ? FaChevronUp : FaChevronDown}
                   boxSize={6}
-                  color="gray.500"
+                  color="green.400"
                 />
               </Flex>
               <Collapse
@@ -68,6 +74,7 @@ function FAQ() {
                   p={4}
                   textColor="gray.600"
                   fontSize={{ base: "sm", md: "md" }}
+                  textAlign={{ base: "center", md: "left" }}
                 >
                   <Text>{faq.answer}</Text>
                 </Box>
@@ -76,7 +83,6 @@ function FAQ() {
           ))}
         </Box>
 
-        {/* Tombol "Tampilkan Lebih Banyak" */}
         {faqs.length > 3 && (
           <Box mt={6} textAlign="center">
             <Button

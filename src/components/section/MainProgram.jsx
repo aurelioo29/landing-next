@@ -24,30 +24,30 @@ const ProgramCards = () => {
   ];
 
   return (
-    <Box mb={20} id="mainProgram">
+    <Box mb={20} id="mainProgram" p={{ base: 8, md: 8 }} pt={{ base: 16 }}>
+      {" "}
       <Heading textAlign="center" color="green.400" mb={8}>
         Program yang Kami Tawarkan
       </Heading>
-
       <Flex
         justify="center"
         direction={["column", "row"]}
         wrap="wrap"
-        spacing={10}
+        spacing={5}
       >
         {programs.map((program, index) => (
           <Flex
             key={index}
-            bg={index % 2 === 0 ? "green.100" : "white"}
+            bg={index % 2 === 0 ? "green.200" : "white"}
             p={5}
             borderRadius="md"
             flex="1"
-            maxW="300px"
+            maxW={{ base: "100%", sm: "300px" }}
             m={2}
             direction="column"
             align="center"
             textAlign="center"
-            shadow={"lg"}
+            shadow="lg"
           >
             <Image
               src={program.image}
@@ -56,14 +56,15 @@ const ProgramCards = () => {
               borderRadius="full"
               mb={4}
             />
-            <Heading fontSize="xl" mb={4}>
+            <Heading fontSize={{ base: "lg", md: "xl" }} mb={4}>
               {program.title}
             </Heading>
-            <Text mb={4}>{program.description}</Text>
+            <Text mb={4} fontSize={{ base: "sm", md: "md" }}>
+              {program.description}
+            </Text>
           </Flex>
         ))}
       </Flex>
-
       <Flex justify="center" mt={10}>
         <Link href="#kurikulum">
           <Button colorScheme="green" size="lg">

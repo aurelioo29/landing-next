@@ -1,24 +1,35 @@
-import { Box, Button, Center, Grid, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Grid, Heading, Text } from "@chakra-ui/react";
 
 export default function TimePrice() {
   return (
-    <Box id="timeprice" mb="20">
-      <Heading as="h1" size="xl" mb={4} color="teal.600">
+    <Box id="timeprice" mb="20" p={4}>
+      <Heading
+        as="h1"
+        size="xl"
+        mb={4}
+        color="green.400"
+        textAlign={{ base: "center", md: "left" }}
+      >
         Time & Price
       </Heading>
-      <Text fontSize="lg" color="gray.700" mb={10}>
+      <Text
+        fontSize="lg"
+        color="black"
+        mb={10}
+        textAlign={{ base: "center", md: "left" }}
+      >
         Temukan jadwal kelas yang tersedia sesuai dengan metode belajar yang
         diinginkan!
       </Text>
       <Box
-        maxW="auto"
+        maxW={{ base: "90%", md: "auto" }}
         mx="auto"
         margin={10}
         textAlign="center"
         boxShadow={"lg"}
       >
         <Box
-          p={10}
+          p={{ base: 5, md: 10 }}
           backgroundColor="white"
           borderRadius="lg"
           boxShadow="xl"
@@ -31,7 +42,12 @@ export default function TimePrice() {
             textAlign={"center"}
             borderTopRadius={"lg"}
           >
-            <Grid templateColumns="repeat(3, 1fr)" gap={4} mt={4} px={4}>
+            <Grid
+              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+              gap={4}
+              mt={4}
+              px={4}
+            >
               <Text fontSize="md" color="black" textAlign="center">
                 Intake October 2024
               </Text>
@@ -56,14 +72,19 @@ export default function TimePrice() {
               Special Promo
             </Text>
             <Text
-              fontSize="3xl"
+              fontSize={{ base: "xl", md: "3xl" }}
               textDecoration="line-through"
               color="gray.400"
               fontWeight="semibold"
             >
               Rp24.975.000*
             </Text>
-            <Text fontSize="4xl" color="green.600" fontWeight="bold" mt={2}>
+            <Text
+              fontSize={{ base: "2xl", md: "4xl" }}
+              color="green.400"
+              fontWeight="bold"
+              mt={2}
+            >
               Rp15.000.000*
             </Text>
             <Text fontSize="sm" color="orange.600" fontWeight="bold" mt={2}>
@@ -79,7 +100,14 @@ export default function TimePrice() {
             <Text color="red.500" fontWeight="bold" mb={4}>
               Pendaftaran ditutup pada 23 October 2024
             </Text>
-            <Button colorScheme="teal" size="lg" px={8}>
+            <Button
+              colorScheme="green"
+              size={{ base: "md", md: "lg" }}
+              px={4}
+              maxW={{ base: "90%", md: "auto" }}
+              mx="auto"
+              fontSize={{ base: "md", md: "lg" }}
+            >
               Dapatkan Harga Promo
             </Button>
           </Box>

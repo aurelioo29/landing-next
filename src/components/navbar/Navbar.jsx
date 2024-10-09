@@ -1,7 +1,18 @@
-import { Box, Flex, Link, Input, Button, Icon, Image } from "@chakra-ui/react";
-import { FaSearch } from "react-icons/fa";
+import {
+  Box,
+  Flex,
+  Link,
+  Input,
+  Icon,
+  Image,
+  Collapse,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
+  const { isOpen, onToggle } = useDisclosure();
+
   return (
     <Box as="nav" bg="black" color="white" py={4} px={8}>
       <Flex
@@ -9,8 +20,9 @@ export default function Navbar() {
         mx="auto"
         alignItems="center"
         justifyContent="space-between"
+        flexWrap="wrap"
       >
-        {/* Logo */}
+
         <Box>
           <Image
             src="/assets/multimatics_logo.png"
@@ -20,8 +32,21 @@ export default function Navbar() {
           />
         </Box>
 
-        {/* Menu Links */}
-        <Flex gap={6} alignItems="center">
+        <Icon
+          as={isOpen ? FaTimes : FaBars}
+          color="white"
+          display={["block", "none"]}
+          boxSize={6}
+          onClick={onToggle}
+          cursor="pointer"
+        />
+
+        <Flex
+          gap={6}
+          alignItems="center"
+          display={["none", "flex"]}
+          flexWrap="wrap" 
+        >
           <Link href="#" fontSize="sm" _hover={{ textDecoration: "underline" }}>
             About
           </Link>
@@ -45,13 +70,78 @@ export default function Navbar() {
           </Link>
         </Flex>
 
-        {/* Search Box */}
+        <Collapse in={isOpen}>
+          <Flex
+            direction="column"
+            alignItems="flex-start"
+            display={["flex", "none"]}
+            gap={2}
+            mt={2}
+            bg="black" 
+            px={4} 
+            borderRadius="md" 
+          >
+            <Link
+              href="#"
+              fontSize="sm"
+              _hover={{ textDecoration: "underline" }}
+            >
+              About
+            </Link>
+            <Link
+              href="#"
+              fontSize="sm"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Academy
+            </Link>
+            <Link
+              href="#"
+              fontSize="sm"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Consultancy
+            </Link>
+            <Link
+              href="#"
+              fontSize="sm"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Campus Affiliate
+            </Link>
+            <Link
+              href="#"
+              fontSize="sm"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Online Learning
+            </Link>
+            <Link
+              href="#"
+              fontSize="sm"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Insight
+            </Link>
+            <Link
+              href="#"
+              fontSize="sm"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Contact
+            </Link>
+          </Flex>
+        </Collapse>
+
         <Flex
           as="form"
           alignItems="center"
           bg="gray.700"
           p={2}
           borderRadius="md"
+          flexShrink={0} 
+          mt={{ base: 4, md: 0 }} 
+          width={{ base: "100%", md: "auto" }}
         >
           <Icon as={FaSearch} color="white" mr={2} />
           <Input
@@ -59,7 +149,7 @@ export default function Navbar() {
             variant="unstyled"
             color="white"
             _placeholder={{ color: "gray.400" }}
-            width="150px"
+            width={{ base: "100%", md: "150px" }}
           />
           <Box
             as="button"

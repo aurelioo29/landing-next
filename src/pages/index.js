@@ -21,9 +21,9 @@ export default function Home() {
         <link rel="icon" href="/assets/favicon.png" />
       </Head>
       <Hero />
-      <Flex p={"36"}>
+      <Flex direction={{ base: "column", md: "row" }} p={{ base: 0, md: 36 }}>
         <Sidebar />
-        <Box flex="1" pl={10}>
+        <Box flex="1" pl={{ base: 0, md: 10 }}>
           <Box id="program-cards">
             <ProgramCards />
           </Box>

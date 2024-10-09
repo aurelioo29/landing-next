@@ -11,41 +11,38 @@ export default function MethodDelivery() {
 
   return (
     <Box
-      h="65vh"
       display="flex"
       justifyContent="center"
       alignItems="center"
       textAlign="center"
       px={4}
-      mb={10}
       id="method"
+      mb="20"
     >
       <Flex
         w="full"
         maxW="1200px"
-        justifyContent="space-between"
-        alignItems="center"
         px={6}
-        direction={["column", "row"]} // Stack on small screens and row on larger screens
+        direction={{ base: "column", md: "row" }}
+        align="center"
       >
-        <Box pt={14}>
+        <Box
+          pt={{ base: 4, md: 0 }}
+          mb={{ base: 4, md: 0 }}
+          textAlign="center"
+        >
           <Image
             src="/assets/hero_section.jpg"
             alt="Hero Section"
             boxSize="470px"
             objectFit="cover"
             borderRadius="2xl"
-            className="heroImage"
           />
         </Box>
 
-        <Box flex="1" textAlign="left" ml={[0, 6]}>
+        <Box flex="1" textAlign="left" ml={{ base: 0, md: 6 }}>
           <VStack spacing={4} align="start">
-            {" "}
-            {/* Align items to start */}
-            <Heading as="h2" size="lg" textAlign="left" mb={4}>
-              {" "}
-              {/* Heading positioned on the left */}
+            <Heading as="h2" size="lg" mb={4}>
               Method of Delivery
             </Heading>
             {methods.map((method, index) => (
@@ -55,7 +52,7 @@ export default function MethodDelivery() {
                 bg="white"
                 borderRadius="md"
                 boxShadow="md"
-                width="full" // Ensure it takes the full width of the container
+                width="full"
               >
                 <Text fontSize="lg" textAlign="justify">
                   {method}

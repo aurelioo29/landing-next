@@ -12,6 +12,7 @@ import {
   Button,
   Badge,
   Heading,
+  Select,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -22,7 +23,7 @@ import {
   dataEngineerData,
 } from "@/data/materiData";
 
-const CurriculumTabs = () => {
+const Curriculum = () => {
   const { activeTab, setActiveTab, mode, setMode } = useTabsStore();
   const [activeModuleIndex, setActiveModuleIndex] = useState(null);
 
@@ -48,58 +49,90 @@ const CurriculumTabs = () => {
   }, 0);
 
   return (
-    <Box mx="auto" mb={20} id="kurikulum">
-      <Heading as={"h1"} mb={5} textTransform={"uppercase"} color={"green.700"}>
+    <Box mx="auto" mb={20} id="kurikulum" p={4}>
+      <Heading
+        as={"h1"}
+        mb={5}
+        textTransform={"uppercase"}
+        color={"green.400"}
+        textAlign={{ base: "center", md: "left" }}
+      >
         Our Kurikulum
       </Heading>
-      <Text fontSize="sm" fontWeight="bold" mb={4}>
+      <Text
+        fontSize="sm"
+        fontWeight="bold"
+        mb={4}
+        textAlign={{ base: "center", md: "left" }}
+      >
         Mengadopsi Kurikulum Teruji Industri: Mengikuti Update Terkini
       </Text>
 
-      <Flex mt={5} mb={5} justify="space-between" align="center">
-        <Box>
-          <Button
-            variant={mode === "Data Analyst" ? "solid" : "outline"}
-            colorScheme="green"
-            mx={2}
-            onClick={() => setMode("Data Analyst")}
-          >
-            Data Analyst
-          </Button>
-          <Button
-            variant={mode === "Data Scientist" ? "solid" : "outline"}
-            colorScheme="green"
-            mx={2}
-            onClick={() => setMode("Data Scientist")}
-          >
-            Data Scientist
-          </Button>
-          <Button
-            variant={mode === "Data Engineer" ? "solid" : "outline"}
-            colorScheme="green"
-            mx={2}
-            onClick={() => setMode("Data Engineer")}
-          >
-            Data Engineer
-          </Button>
+      <Flex
+        direction={["column", "row"]}
+        align="center"
+        justify="space-between"
+        flexWrap="wrap"
+        mb={5}
+      >
+        <Box display="flex" flexWrap="wrap" justifyContent="center" mb={[4, 0]}>
+          {["Data Analyst", "Data Scientist", "Data Engineer"].map((label) => (
+            <Button
+              key={label}
+              variant={mode === label ? "solid" : "outline"}
+              colorScheme="green"
+              mx={1}
+              my={1}
+              onClick={() => setMode(label)}
+            >
+              {label}
+            </Button>
+          ))}
         </Box>
-        <Badge fontSize={"md"} p={1.5} borderRadius={"lg"} colorScheme="green">
+        <Badge
+          fontSize={"md"}
+          p={2}
+          borderRadius={"lg"}
+          colorScheme="green"
+          mt={[4, 0]}
+          mx={["auto", 0]}
+        >
           {totalLessons} Lessons
         </Badge>
       </Flex>
 
-      {/* Tabs for different categories */}
+      <Flex justify="center" mb={4}>
+        <Select
+          onChange={(e) => setActiveTab(e.target.selectedIndex)}
+          placeholder="Pilih Kategori"
+          variant="outline"
+          mb={4}
+          width={{ base: "90%", md: "200px" }}
+          display={{ base: "block", md: "none" }} // Hanya tampil di mobile
+        >
+          {dataToUse().map((tab, index) => (
+            <option key={index} value={index}>
+              {tab.category}
+            </option>
+          ))}
+        </Select>
+      </Flex>
+
       <Tabs
         index={activeTab}
         onChange={(index) => setActiveTab(index)}
         variant="enclosed"
+        isLazy
+        lazyBehavior="keepMounted"
       >
         <TabList>
-          {dataToUse().map((tab, index) => (
-            <Tab key={index} _selected={{ borderBottom: "5px solid black" }}>
-              {tab.category}
-            </Tab>
-          ))}
+          <Flex display={["none", "flex"]} justify="space-between">
+            {dataToUse().map((tab, index) => (
+              <Tab key={index} _selected={{ borderBottom: "5px solid black" }}>
+                {tab.category}
+              </Tab>
+            ))}
+          </Flex>
         </TabList>
 
         <TabPanels>
@@ -111,6 +144,7 @@ const CurriculumTabs = () => {
                 borderRadius="md"
                 p={4}
                 boxShadow={"2xl"}
+                my={4}
               >
                 {tab.modules.map((module, idx) => (
                   <Box key={idx} mb={4}>
@@ -123,6 +157,7 @@ const CurriculumTabs = () => {
                       borderColor="gray.300"
                       cursor="pointer"
                       onClick={() => toggleModule(idx)}
+                      _hover={{ bg: "gray.100" }}
                     >
                       <Text fontWeight="bold">{module.title}</Text>
                       <Icon
@@ -168,4 +203,4 @@ const CurriculumTabs = () => {
   );
 };
 
-export default CurriculumTabs;
+export default Curriculum;

@@ -31,38 +31,54 @@ export default function Hero() {
         alignItems="center"
         px={6}
       >
-        <Box textAlign="left" maxW="600px" mb={{ base: 6, md: 0 }}>
-          {" "}
+        <Box
+          textAlign={{ base: "center", md: "left" }} 
+          maxW={{ base: "100%", md: "600px" }}
+          mb={{ base: 6, md: 0 }}
+        >
           <Heading as="h1" size="2xl" mb={4}>
             Transform Your Career with{" "}
             <Text as="span" color="green.400">
               Data Mastery !!!
-            </Text>{" "}
+            </Text>
           </Heading>
           <Text fontSize="lg" color="gray.600" mb={6}>
             Join our immersive bootcamp designed for aspiring Data Analytics,
             Data Science, and Data Engineering experts. Gain the skills to
             thrive in today&apos;s data-driven world.
           </Text>
-          <HStack
+          <VStack
             spacing={4}
-            justifyContent={{ base: "center", md: "flex-start" }}
+            justifyContent={{ base: "center", md: "flex-start" }} 
+            alignItems={{ base: "center", md: "flex-start" }}
+            mt={{ base: 4, md: 0 }} 
           >
-            {" "}
             <Link href="#contact">
-              <Button colorScheme="green" size="lg">
+              <Button
+                colorScheme="green"
+                size="lg"
+                width={{ base: "100%", md: "auto" }}
+              >
                 Contact Us
               </Button>
             </Link>
             <Link href="#timeprice">
-              <Button variant="outline" colorScheme="green" size="lg">
+              <Button
+                variant="outline"
+                colorScheme="green"
+                size="lg"
+                width={{ base: "100%", md: "auto" }}
+              >
                 Lihat Jadwal & Biaya
               </Button>
             </Link>
-          </HStack>
+          </VStack>
         </Box>
 
-        <Box>
+        <Box
+          flexShrink={0}
+          mt={{ base: 4, md: 0 }}
+        >
           <Image
             src="/assets/hero_section.jpg"
             alt="Hero Section"
