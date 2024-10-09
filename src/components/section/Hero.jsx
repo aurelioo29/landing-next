@@ -54,9 +54,11 @@ export default function Hero() {
                 Contact Us
               </Button>
             </Link>
-            <Button variant="outline" colorScheme="green" size="lg">
-              Lihat Jadwal & Biaya
-            </Button>
+            <Link href="#timeprice">
+              <Button variant="outline" colorScheme="green" size="lg">
+                Lihat Jadwal & Biaya
+              </Button>
+            </Link>
           </HStack>
         </Box>
 
