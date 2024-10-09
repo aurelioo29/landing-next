@@ -10,6 +10,7 @@ import { journeyData } from "@/data/journeyData";
 import JourneySteps from "@/components/section/JourneyProgram";
 import ProgramCards from "@/components/section/MainProgram";
 import MethodDelivery from "@/components/section/MethodDelivery";
+import ScrollToTop from "@/components/modal/ScrollToTop";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
         </Box>
       </Flex>
       <Contact />
+      <ScrollToTop />
     </>
   );
 }
