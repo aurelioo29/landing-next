@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <Box
       bg="gray.100"
-      h={{ base: "auto", md: "65vh" }}
+      h={{ base: "auto", md: "90vh" }}
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -32,14 +32,14 @@ export default function Hero() {
         px={6}
       >
         <Box
-          textAlign={{ base: "center", md: "left" }} 
+          textAlign={{ base: "center", md: "left" }}
           maxW={{ base: "100%", md: "600px" }}
           mb={{ base: 6, md: 0 }}
         >
           <Heading as="h1" size="2xl" mb={4}>
             Transform Your Career with{" "}
             <Text as="span" color="green.400">
-              Data Mastery !!!
+              Data Expert !!!
             </Text>
           </Heading>
           <Text fontSize="lg" color="gray.600" mb={6}>
@@ -49,9 +49,9 @@ export default function Hero() {
           </Text>
           <VStack
             spacing={4}
-            justifyContent={{ base: "center", md: "flex-start" }} 
+            justifyContent={{ base: "center", md: "flex-start" }}
             alignItems={{ base: "center", md: "flex-start" }}
-            mt={{ base: 4, md: 0 }} 
+            mt={{ base: 4, md: 0 }}
           >
             <Link href="#contact">
               <Button
@@ -75,10 +75,7 @@ export default function Hero() {
           </VStack>
         </Box>
 
-        <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-        >
+        <Box flexShrink={0} mt={{ base: 4, md: 0 }}>
           <Image
             src="/assets/hero_section.jpg"
             alt="Hero Section"

@@ -1,5 +1,16 @@
-import { Box, Flex, Heading, Text, Button, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Divider,
+  Button,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ProgramCards = () => {
   const programs = [
@@ -23,13 +34,37 @@ const ProgramCards = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <Box mb={20} id="mainProgram" p={{ base: 8, md: 8 }} pt={{ base: 16 }}>
-      {" "}
-      <Heading textAlign="center" color="green.400" mb={8}>
-        Program yang Kami Tawarkan
-      </Heading>
+    <Box
+      mb={20}
+      id="mainProgram"
+      p={{ base: 8, md: 0 }}
+      // backgroundColor={"red.500"}
+      mr={6}
+    >
+      {/* Title Text */}
+      <Flex align="center" mb={8}>
+        <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
+        <Heading
+          textAlign="center"
+          color="customYellow.500"
+          mx={5}
+          whiteSpace="nowrap"
+          fontSize={{ base: "2xl", md: "4xl" }}
+          data-aos="fade-up"
+        >
+          Our Program
+        </Heading>
+        <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
+      </Flex>
+
+      {/* Program Cards */}
       <Flex
+        justifyContent={"space-around"}
         justify="center"
         direction={["column", "row"]}
         wrap="wrap"
@@ -67,7 +102,7 @@ const ProgramCards = () => {
       </Flex>
       <Flex justify="center" mt={10}>
         <Link href="#kurikulum">
-          <Button colorScheme="green" size="lg">
+          <Button colorScheme="customYellow" size="lg">
             Let&apos;s See Our Program
           </Button>
         </Link>

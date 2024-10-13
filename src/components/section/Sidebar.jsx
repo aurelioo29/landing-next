@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import {
   Box,
   Link,
-  Text,
-  IconButton,
   VStack,
+  Icon,
+  Tooltip,
   Drawer,
   DrawerBody,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
+  IconButton,
   useDisclosure,
-  HStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { useSectionStore } from "@/hooks/sectionStore";
@@ -41,29 +41,52 @@ export default function Sidebar() {
   }, [setActiveSection]);
 
   return (
-    <Box
-      bg="white"
-      h="fit-content"
-      p={4}
-      border="1px solid #FFFF"
-      boxShadow="2xl"
-      borderRadius="lg"
-      position="sticky"
-      top={0}
-      zIndex={1000}
-      w={{ base: "100%", md: "230px" }}
-    >
-      <HStack display={{ base: "flex", md: "none" }} justify="space-between">
-        <Text fontWeight="bold" fontSize="xl">
-          Our Menu
-        </Text>
+    <>
+      {/* Tombol Menu Mobile */}
+      <Box
+        display={{ base: "block", md: "none" }}
+        position="fixed"
+        top={4}
+        left={4}
+      >
         <IconButton
           icon={<HamburgerIcon />}
           onClick={onOpen}
           aria-label="Open Menu"
+          size="lg"
         />
-      </HStack>
+      </Box>
 
+      {/* Sidebar untuk Desktop */}
+      <Box
+        h="35vh"
+        p={2}
+        position="sticky"
+        top={0}
+        zIndex={1000}
+        w="60px" // Lebar sidebar hanya untuk ikon
+        display={{ base: "none", md: "block" }} // Hanya tampil di desktop
+        color={"customYellow.500"}
+      >
+        <VStack align="flex-start" spacing={4}>
+          {linksData.map((link, index) => (
+            <Tooltip
+              label={link.label} // Menampilkan teks di atas kotak
+              placement="right"
+              hasArrow
+              key={index}
+            >
+              <Link href={link.href} _hover={{ textDecoration: "none" }}>
+                <Box display="flex" alignItems="center">
+                  <Icon as={link.icon} boxSize={6} />
+                </Box>
+              </Link>
+            </Tooltip>
+          ))}
+        </VStack>
+      </Box>
+
+      {/* Drawer untuk Mobile */}
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -77,46 +100,16 @@ export default function Sidebar() {
                   _hover={{ textDecoration: "none" }}
                   onClick={onClose}
                 >
-                  <Text
-                    fontWeight={activeSection === link.href ? "bold" : "normal"}
-                    bg={
-                      activeSection === link.href ? "green.400" : "transparent"
-                    }
-                    p={activeSection === link.href ? 1 : 0}
-                    fontSize="md"
-                  >
-                    {link.label}
-                  </Text>
+                  <Box display="flex" alignItems="center">
+                    <Icon as={link.icon} boxSize={6} />
+                    <Box ml={2}>{link.label}</Box>
+                  </Box>
                 </Link>
               ))}
             </VStack>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-
-      <VStack
-        align="flex-start"
-        spacing={4}
-        display={{ base: "none", md: "flex" }}
-      >
-        {linksData.map((link, index) => (
-          <Link
-            key={index}
-            href={link.href}
-            _hover={{ textDecoration: "none" }}
-          >
-            <Text
-              fontWeight={activeSection === link.href ? "bold" : "normal"}
-              bg={activeSection === link.href ? "green.200" : "transparent"}
-              p={activeSection === link.href ? 1 : 0}
-              fontSize={{ base: "sm", md: "md" }}
-              borderRadius={"lg"}
-            >
-              {link.label}
-            </Text>
-          </Link>
-        ))}
-      </VStack>
-    </Box>
+    </>
   );
 }
