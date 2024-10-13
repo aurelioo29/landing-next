@@ -49,21 +49,30 @@ const Curriculum = () => {
   }, 0);
 
   return (
-    <Box mx="auto" mb={20} id="kurikulum" p={4}>
+    <Box
+      mx="auto"
+      mb={20}
+      id="kurikulum"
+      p={8}
+      bg={"#eaeaea"}
+      mr={6}
+      borderRadius={"2xl"}
+    >
       <Heading
         as={"h1"}
         mb={5}
-        textTransform={"uppercase"}
-        color={"green.400"}
-        textAlign={{ base: "center", md: "left" }}
+        // textTransform={"uppercase"}
+        color={"customBlue.500"}
+        textAlign={{ base: "center", md: "center" }}
+        fontSize={{ base: "2px", md: "5xl" }}
       >
-        Our Kurikulum
+        OUR CURICULUM
       </Heading>
       <Text
         fontSize="sm"
         fontWeight="bold"
         mb={4}
-        textAlign={{ base: "center", md: "left" }}
+        textAlign={{ base: "center", md: "center" }}
       >
         Mengadopsi Kurikulum Teruji Industri: Mengikuti Update Terkini
       </Text>
@@ -80,7 +89,7 @@ const Curriculum = () => {
             <Button
               key={label}
               variant={mode === label ? "solid" : "outline"}
-              colorScheme="green"
+              colorScheme="yellow" // Gunakan warna kustom di sini
               mx={1}
               my={1}
               onClick={() => setMode(label)}
@@ -93,7 +102,7 @@ const Curriculum = () => {
           fontSize={"md"}
           p={2}
           borderRadius={"lg"}
-          colorScheme="green"
+          colorScheme="yellow"
           mt={[4, 0]}
           mx={["auto", 0]}
         >
@@ -138,14 +147,7 @@ const Curriculum = () => {
         <TabPanels>
           {dataToUse().map((tab, index) => (
             <TabPanel key={index}>
-              <Box
-                border="1px solid"
-                borderColor="gray.200"
-                borderRadius="md"
-                p={4}
-                boxShadow={"2xl"}
-                my={4}
-              >
+              <Box borderRadius="2xl" p={2} boxShadow={"1xl"}>
                 {tab.modules.map((module, idx) => (
                   <Box key={idx} mb={4}>
                     <Flex
@@ -154,10 +156,10 @@ const Curriculum = () => {
                       py={2}
                       px={4}
                       borderBottom="1px solid"
-                      borderColor="gray.300"
+                      borderColor="gray.400"
                       cursor="pointer"
                       onClick={() => toggleModule(idx)}
-                      _hover={{ bg: "gray.100" }}
+                      _hover={{ bg: "gray.130" }}
                     >
                       <Text fontWeight="bold">{module.title}</Text>
                       <Icon
@@ -167,13 +169,13 @@ const Curriculum = () => {
                             : FaChevronDown
                         }
                         boxSize={5}
-                        color="gray.500"
+                        color="customYellow.500"
                       />
                     </Flex>
 
                     <Collapse in={activeModuleIndex === idx} animateOpacity>
                       <Box
-                        p={4}
+                        p={8}
                         color="gray.700"
                         mt="4"
                         bg="gray.50"

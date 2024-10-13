@@ -1,4 +1,12 @@
-import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Divider,
+  Button,
+} from "@chakra-ui/react";
 import { useJourneyStore } from "@/hooks/useJourneyStore";
 import PopupDetail from "../modal/PopupDetail";
 
@@ -6,10 +14,22 @@ const JourneySteps = ({ data }) => {
   const { currentStep, setStep } = useJourneyStore();
 
   return (
-    <Box bg="gray.50" p={{ base: 4, md: 10 }} mb={20} id="journey">
-      <Heading color="green.400" mb={6} textAlign="center">
-        Our Journey Program
-      </Heading>
+    <Box color="white" p={{ base: 4, md: 6 }} mb={20} id="journey" mr={6}>
+      <Flex align="center" mb={8}>
+        <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
+        <Heading
+          textAlign="center"
+          color="customYellow.500"
+          mx={5}
+          whiteSpace="nowrap"
+          fontSize={{ base: "2xl", md: "4xl" }}
+          data-aos="fade-up"
+        >
+          Program Journey
+        </Heading>
+        <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
+      </Flex>
+
       <Text mb={8} fontSize="lg" textAlign="center">
         Mulai karirmu di bidang data sebagai Data Analyst atau Data Scientist
         dengan program training bootcamp selama 12-14 minggu dan dapatkan
@@ -18,33 +38,72 @@ const JourneySteps = ({ data }) => {
       </Text>
 
       <Flex
-        direction={["column", "row"]}
-        wrap="wrap"
-        justify="center"
-        align="center"
-        maxW="1200px"
-        mx="auto"
+        position="relative"
+        justifyContent="space-between"
+        alignItems="center"
+        wrap="nowrap"
+        minHeight="350px"
       >
+        <Divider
+          orientation="horizontal"
+          borderColor="customYellow.500"
+          position="absolute"
+          left={0}
+          right={0}
+          top="50%"
+        />
+
         {data.map((step, index) => (
           <Flex
             key={index}
-            bg={index % 2 === 0 ? "green.200" : "white"}
-            color="black"
-            p={5}
-            borderRadius="md"
-            flex="1"
-            maxW={{ base: "90%", sm: "300px" }}
-            minH="200px"
-            m={2}
             direction="column"
             align="center"
+            minW="220px"
+            maxW="220px"
+            mx={4}
+            position="relative"
             onClick={() => setStep(step)}
             cursor="pointer"
-            textAlign="center"
-            shadow="lg"
+            data-aos={index % 2 === 0 ? "fade-down" : "fade-up"}
           >
-            <Image src={step.image} alt={step.title} boxSize="50px" mb={4} />
-            <Text fontWeight="bold">{step.title}</Text>
+            <Flex
+              bg={index % 2 === 0 ? "customYellow.500" : "#eaeaea"}
+              color="black"
+              p={4}
+              borderRadius="2xl"
+              shadow="lg"
+              align="center"
+              direction="column"
+              height="200px"
+              transform={
+                index % 2 === 0 ? "translateY(-30%)" : "translateY(30%)"
+              }
+            >
+              <Image
+                src={step.image}
+                alt={step.title}
+                boxSize="55px"
+                objectFit="contain"
+                mb={4}
+              />
+
+              <Box textAlign="center">
+                <Heading fontSize="md" mb={4}>
+                  {step.title}
+                </Heading>
+                <Text fontSize="sm" mb={8}>
+                  {step.description}
+                </Text>
+                <Button
+                  variant="outline"
+                  colorScheme="black"
+                  size="sm"
+                  _hover={{ bg: "customBlue.500", color: "white" }}
+                >
+                  Read More...
+                </Button>
+              </Box>
+            </Flex>
           </Flex>
         ))}
       </Flex>

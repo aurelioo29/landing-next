@@ -5,7 +5,6 @@ import {
   Button,
   VStack,
   Image,
-  HStack,
   Flex,
 } from "@chakra-ui/react";
 import Style from "../../styles/Animation.module.css";
@@ -15,7 +14,7 @@ export default function Hero() {
   return (
     <Box
       bg="gray.100"
-      h={{ base: "auto", md: "90vh" }}
+      h={{ base: "auto", md: "95vh" }}
       display="flex"
       justifyContent="center"
       alignItems="center"

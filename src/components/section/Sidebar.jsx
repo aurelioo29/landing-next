@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   Box,
   Link,
@@ -78,7 +78,8 @@ export default function Sidebar() {
             >
               <Link href={link.href} _hover={{ textDecoration: "none" }}>
                 <Box display="flex" alignItems="center">
-                  <Icon as={link.icon} boxSize={6} />
+                  <Icon as={link.icon} boxSize={6} />{" "}
+                  {/* Menggunakan ikon dari linksData */}
                 </Box>
               </Link>
             </Tooltip>

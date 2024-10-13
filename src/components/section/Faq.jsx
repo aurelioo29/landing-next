@@ -18,14 +18,14 @@ function FAQ() {
   const visibleFAQs = showMore ? faqs : faqs.slice(0, 3);
 
   return (
-    <Box id="faq" py={10} bg="white" mb="10">
-      <Box px={4} mx="auto">
+    <Box id="faq" p={10} bg="#eaeaea" mb="10" mr={6} borderRadius={"2xl"}>
+      <Box mx="auto">
         <Heading
           as="h2"
           size="xl"
           mb={8}
-          color="black"
-          textAlign={{ base: "center", md: "left" }}
+          color="#222222"
+          textAlign={{ base: "center", md: "center" }}
         >
           Frequently Asked Questions (FAQ)
         </Heading>
@@ -45,8 +45,8 @@ function FAQ() {
                 justify="space-between"
                 align="center"
                 py={4}
-                bg="white"
-                _hover={{ bg: "gray.50" }}
+                bg="#eaeaea"
+                _hover={{ bg: "#eaeaea" }}
                 flexDirection={{ base: "column", md: "row" }}
               >
                 <Text
@@ -61,7 +61,7 @@ function FAQ() {
                 <Icon
                   as={activeIndex === index ? FaChevronUp : FaChevronDown}
                   boxSize={6}
-                  color="green.400"
+                  color="customYellow.500"
                 />
               </Flex>
               <Collapse

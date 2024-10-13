@@ -8,8 +8,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const ProgramCards = () => {
@@ -34,18 +32,8 @@ const ProgramCards = () => {
     },
   ];
 
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, []);
-
   return (
-    <Box
-      mb={20}
-      id="mainProgram"
-      p={{ base: 8, md: 0 }}
-      // backgroundColor={"red.500"}
-      mr={6}
-    >
+    <Box mb={20} id="mainProgram" p={{ base: 8, md: 0 }} mr={6}>
       {/* Title Text */}
       <Flex align="center" mb={8}>
         <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />

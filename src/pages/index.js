@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Contact from "@/components/section/Contact";
 import Curriculum from "@/components/section/Curiculum";
 import Faq from "@/components/section/Faq";
@@ -11,8 +12,15 @@ import JourneySteps from "@/components/section/JourneyProgram";
 import ProgramCards from "@/components/section/MainProgram";
 import MethodDelivery from "@/components/section/MethodDelivery";
 import ScrollToTop from "@/components/modal/ScrollToTop";
+import ClientLogos from "@/components/section/ClientLogo";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <>
       <Head>
@@ -36,6 +44,7 @@ export default function Home() {
           <JourneySteps data={journeyData} />
           <Curriculum />
           <TimePrice />
+          <ClientLogos />
           <Box id="faq-section">
             <Faq />
           </Box>
