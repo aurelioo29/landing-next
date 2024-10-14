@@ -14,7 +14,13 @@ const JourneySteps = ({ data }) => {
   const { currentStep, setStep } = useJourneyStore();
 
   return (
-    <Box color="white" p={{ base: 4, md: 6 }} mb={20} id="journey" mr={6}>
+    <Box
+      color="white"
+      p={{ base: 4, md: 6 }}
+      mb={20}
+      id="journey"
+      mr={{ md: 6 }}
+    >
       <Flex align="center" mb={8}>
         <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
         <Heading
@@ -39,18 +45,21 @@ const JourneySteps = ({ data }) => {
 
       <Flex
         position="relative"
-        justifyContent="space-between"
+        justifyContent={{ base: "center", md: "space-between" }}
         alignItems="center"
-        wrap="nowrap"
+        wrap={{ base: "wrap", md: "nowrap" }} // Responsif wrap di mobile
+        direction={{ base: "column", md: "row" }} // Kolom di mobile, baris di desktop
+        gap={{ base: 8, md: 0 }} // Jarak antar item di mobile
         minHeight="350px"
       >
         <Divider
-          orientation="horizontal"
+          orientation={{ base: "vertical", md: "horizontal" }} // Vertikal di mobile
           borderColor="customYellow.500"
           position="absolute"
-          left={0}
-          right={0}
-          top="50%"
+          left={{ base: "50%", md: 0 }}
+          top={{ base: 0, md: "50%" }}
+          height={{ base: "100%", md: "1px" }}
+          width={{ base: "1px", md: "100%" }}
         />
 
         {data.map((step, index) => (
@@ -60,7 +69,7 @@ const JourneySteps = ({ data }) => {
             align="center"
             minW="220px"
             maxW="220px"
-            mx={4}
+            mx={{ base: 0, md: 4 }}
             position="relative"
             onClick={() => setStep(step)}
             cursor="pointer"
@@ -76,7 +85,9 @@ const JourneySteps = ({ data }) => {
               direction="column"
               height="200px"
               transform={
-                index % 2 === 0 ? "translateY(-30%)" : "translateY(30%)"
+                index % 2 === 0
+                  ? { base: "none", md: "translateY(-30%)" }
+                  : { base: "none", md: "translateY(30%)" }
               }
             >
               <Image

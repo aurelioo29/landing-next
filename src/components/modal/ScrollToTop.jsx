@@ -35,7 +35,7 @@ const ScrollToTop = () => {
           <IconButton
             icon={<FaArrowUp />}
             onClick={scrollToTop}
-            colorScheme="green"
+            colorScheme="yellow"
             size="lg"
             isRound
             aria-label="Scroll to top"

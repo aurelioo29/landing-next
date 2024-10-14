@@ -26,7 +26,6 @@ import {
 const Curriculum = () => {
   const { activeTab, setActiveTab, mode, setMode } = useTabsStore();
   const [activeModuleIndex, setActiveModuleIndex] = useState(null);
-
   const dataToUse = () => {
     switch (mode) {
       case "Data Analyst":
@@ -51,20 +50,21 @@ const Curriculum = () => {
   return (
     <Box
       mx="auto"
-      mb={20}
+      mb={30}
       id="kurikulum"
       p={8}
       bg={"#eaeaea"}
-      mr={6}
+      mr={{ md: 6 }}
+      m={{ base: 4 }}
       borderRadius={"2xl"}
     >
       <Heading
         as={"h1"}
         mb={5}
-        // textTransform={"uppercase"}
         color={"customBlue.500"}
         textAlign={{ base: "center", md: "center" }}
-        fontSize={{ base: "2px", md: "5xl" }}
+        fontSize={{ base: "2xl", md: "5xl" }}
+        data-aos="fade-up"
       >
         OUR CURICULUM
       </Heading>
@@ -73,8 +73,10 @@ const Curriculum = () => {
         fontWeight="bold"
         mb={4}
         textAlign={{ base: "center", md: "center" }}
+        data-aos="fade-up"
       >
-        Mengadopsi Kurikulum Teruji Industri: Mengikuti Update Terkini
+        Implementing Trusted Curriculum from the Industrial World and Staying
+        Updated
       </Text>
 
       <Flex
@@ -89,10 +91,11 @@ const Curriculum = () => {
             <Button
               key={label}
               variant={mode === label ? "solid" : "outline"}
-              colorScheme="yellow" // Gunakan warna kustom di sini
+              colorScheme="yellow"
               mx={1}
               my={1}
               onClick={() => setMode(label)}
+              data-aos="fade-right"
             >
               {label}
             </Button>
@@ -105,6 +108,7 @@ const Curriculum = () => {
           colorScheme="yellow"
           mt={[4, 0]}
           mx={["auto", 0]}
+          data-aos="fade-left"
         >
           {totalLessons} Lessons
         </Badge>
@@ -117,7 +121,8 @@ const Curriculum = () => {
           variant="outline"
           mb={4}
           width={{ base: "90%", md: "200px" }}
-          display={{ base: "block", md: "none" }} // Hanya tampil di mobile
+          display={{ base: "block", md: "none" }}
+          data-aos="fade-up"
         >
           {dataToUse().map((tab, index) => (
             <option key={index} value={index}>
@@ -137,7 +142,11 @@ const Curriculum = () => {
         <TabList>
           <Flex display={["none", "flex"]} justify="space-between">
             {dataToUse().map((tab, index) => (
-              <Tab key={index} _selected={{ borderBottom: "5px solid black" }}>
+              <Tab
+                key={index}
+                _selected={{ borderBottom: "5px solid #1b1c51" }}
+                data-aos="fade-up"
+              >
                 {tab.category}
               </Tab>
             ))}
@@ -149,7 +158,7 @@ const Curriculum = () => {
             <TabPanel key={index}>
               <Box borderRadius="2xl" p={2} boxShadow={"1xl"}>
                 {tab.modules.map((module, idx) => (
-                  <Box key={idx} mb={4}>
+                  <Box key={idx} mb={4} data-aos="fade-up">
                     <Flex
                       justify="space-between"
                       align="center"

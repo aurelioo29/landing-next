@@ -1,12 +1,4 @@
-import {
-  Box,
-  Grid,
-  Heading,
-  Image,
-  Text,
-  Divider,
-  Flex,
-} from "@chakra-ui/react";
+import { Box, Grid, Heading, Image, Text, Flex } from "@chakra-ui/react";
 import { ClientData } from "@/data/clientData";
 
 const ClientLogos = () => {
@@ -14,37 +6,44 @@ const ClientLogos = () => {
     <Box
       textAlign="center"
       my={10}
-      backgroundColor={"#eaeaea"}
-      mr={6}
-      p={10}
-      borderRadius={"2xl"}
-      shadow={"2xl"}
+      backgroundColor="#eaeaea"
+      mx="auto"
+      p={{ base: 6, md: 10 }}
+      m={{ base: 4, md: 0 }}
+      maxW={{ base: "1200px", md: "99%" }}
+      borderRadius="2xl"
+      shadow="2xl"
+      mb={50}
+      mr={{ md: 6 }}
     >
-      <Flex align="center" justify="center" mb={2}>
-        <Divider
-          borderColor="customYellow.500"
-          borderWidth="2.0px"
-          width="30%"
-        />
+      <Heading
+        as="h1"
+        fontSize={{ base: "3xl", md: "5xl" }}
+        textColor="customBlue.500"
+        mx={4}
+        mb={{ base: 4, md: 6 }}
+        data-aos="zoom-in"
+      >
+        LIST OF MULTIMATICS
+      </Heading>
 
-        {/* Mengurangi margin horizontal (mx) */}
-        <Heading as="h1" fontSize="5xl" textColor="customYellow.500" mx={4}>
-          LIST OF MULTIMATICS
-        </Heading>
-
-        <Divider
-          borderColor="customYellow.500"
-          borderWidth="2.0px"
-          width="30%"
-        />
-      </Flex>
-
-      <Text mb={5} fontSize="5xl" color="black" fontWeight={"semiBold"}>
+      <Text
+        mb={8}
+        fontSize={{ base: "lg", md: "2xl" }}
+        color="black"
+        fontWeight="semibold"
+        data-aos="zoom-out-up"
+      >
         PROGRAM TRAINING CLIENTS
       </Text>
 
       <Grid
-        templateColumns="repeat(7, 1fr)" // Menggunakan 7 kolom
+        templateColumns={{
+          base: "repeat(2, 1fr)", // 2 kolom untuk mobile
+          sm: "repeat(3, 1fr)", // 3 kolom untuk tablet kecil
+          md: "repeat(5, 1fr)", // 5 kolom untuk tablet besar
+          lg: "repeat(7, 1fr)", // 7 kolom untuk desktop
+        }}
         gap={6}
         justifyItems="center"
         alignItems="center"
@@ -56,17 +55,21 @@ const ClientLogos = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            boxSize="135px"
-            _hover={{ transform: "scale(1.1)", transition: "0.3s ease-in-out" }}
+            boxSize={{ base: "95px", md: "135px" }}
+            _hover={{
+              transform: "scale(1.1)",
+              transition: "0.3s ease-in-out",
+            }}
             transition="0.3s ease-in-out"
-            data-aos="zoom-out-up"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
           >
             <Image
               src={client.logo}
               alt={client.name}
               objectFit="contain"
-              maxHeight="200px"
-              maxWidth="150px"
+              maxHeight="150px"
+              maxWidth="120px"
             />
           </Box>
         ))}

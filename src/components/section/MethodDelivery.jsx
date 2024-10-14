@@ -13,31 +13,37 @@ export default function MethodDelivery() {
     <Box
       backgroundColor={"#eaeaea"}
       display="flex"
-      justifyContent="center"
+      justifyContent="space-around"
       alignItems="center"
       textAlign="center"
       id="method"
       borderRadius={"2xl"}
       p={10}
-      mr={6}
+      mr={{ md: 6 }}
+      mb={"20"}
+      m={{ base: 4 }}
     >
       <Box>
-        <Heading as="h2" size="lg" mb={8}>
-          Method of Delivery
+        <Heading
+          as="h2"
+          size="2xl"
+          mb={8}
+          color={"customBlue.500"}
+          data-aos="fade-up"
+        >
+          METHOD OF DELIVERY
         </Heading>
         <Flex
-          w="full"
-          maxW="1200px"
-          px={6}
+          maxW="1700px"
           direction={{ base: "column", md: "row" }}
           align="center"
-          justifyContent={"space-between"}
         >
           <Box
             pt={{ base: 4, md: 0 }}
             mb={{ base: 4, md: 0 }}
             flex="1"
             mr={{ base: 0, md: 6 }}
+            data-aos="fade-right"
           >
             <Image
               src="/assets/hero_section.jpg"
@@ -53,8 +59,9 @@ export default function MethodDelivery() {
             textAlign="center"
             ml={{ base: 0, md: 6 }}
             mr={{ base: 0, md: 6 }}
-            borderRadius="md" // Menambahkan border radius jika diinginkan
-            p={4} // Tambahkan padding jika diinginkan
+            borderRadius="md"
+            p={4}
+            data-aos="fade-left"
           >
             <VStack spacing={4} align="center">
               {methods.map((method, index) => (
@@ -66,6 +73,7 @@ export default function MethodDelivery() {
                   borderRadius="md"
                   boxShadow="md"
                   width="full"
+                  data-aos="zoom-in"
                 >
                   <Text fontSize="lg" textAlign="justify">
                     {method}

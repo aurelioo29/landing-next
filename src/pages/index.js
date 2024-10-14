@@ -4,7 +4,6 @@ import Curriculum from "@/components/section/Curiculum";
 import Faq from "@/components/section/Faq";
 import Hero from "@/components/section/Hero";
 import Sidebar from "@/components/section/Sidebar";
-import TimePrice from "@/components/section/TimePrice";
 import { Box, Flex } from "@chakra-ui/react";
 import Head from "next/head";
 import { journeyData } from "@/data/journeyData";
@@ -15,10 +14,12 @@ import ScrollToTop from "@/components/modal/ScrollToTop";
 import ClientLogos from "@/components/section/ClientLogo";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Timeline from "@/components/section/Timeline";
+import Price from "@/components/section/Price";
 
 export default function Home() {
   useEffect(() => {
-    AOS.init({ duration: 1500 });
+    AOS.init({ duration: 1700 });
   }, []);
 
   return (
@@ -34,6 +35,7 @@ export default function Home() {
         direction={{ base: "column", md: "row" }}
         pl={{ base: 0, md: 4 }}
         pt={{ base: 0, md: 20 }}
+        overflow={"hidden"}
       >
         <Sidebar />
         <Box flex="1">
@@ -43,7 +45,8 @@ export default function Home() {
           <MethodDelivery />
           <JourneySteps data={journeyData} />
           <Curriculum />
-          <TimePrice />
+          <Timeline />
+          <Price />
           <ClientLogos />
           <Box id="faq-section">
             <Faq />

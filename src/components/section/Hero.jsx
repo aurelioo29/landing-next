@@ -61,7 +61,7 @@ export default function Hero() {
                 Contact Us
               </Button>
             </Link>
-            <Link href="#timeprice">
+            <Link href="#timeline">
               <Button
                 variant="outline"
                 colorScheme="green"
