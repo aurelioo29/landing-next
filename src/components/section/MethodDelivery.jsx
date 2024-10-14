@@ -1,4 +1,5 @@
 import { Box, Flex, Text, Heading, Image, VStack } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
 export default function MethodDelivery() {
   const methods = [
@@ -8,6 +9,26 @@ export default function MethodDelivery() {
     "Quizzes and Exams: Periodic assessments to evaluate understanding and progress.",
     "Peer Discussions and Support: Interactive sessions for collaborative learning.",
   ];
+
+  // Daftar URL gambar
+  const images = [
+    "/assets/hero_section.jpg",
+    "/assets/analyst.png",
+    "/assets/engineer.png",
+    "/assets/scienst.png",
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <Box
@@ -46,7 +67,7 @@ export default function MethodDelivery() {
             data-aos="fade-right"
           >
             <Image
-              src="/assets/hero_section.jpg"
+              src={images[currentImageIndex]}
               alt="Hero Section"
               boxSize="500px"
               objectFit="cover"
