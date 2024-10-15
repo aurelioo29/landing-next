@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <Box
-      bg="gray.100"
+      position="relative"
       h={{ base: "auto", md: "95vh" }}
       display="flex"
       justifyContent="center"
@@ -21,47 +21,62 @@ export default function Hero() {
       textAlign="center"
       px={4}
       py={{ base: 8, md: 0 }}
+      overflow="hidden" // Important to avoid content overflow
     >
+      {/* Background Blur Effect */}
+      <Box
+        position="absolute"
+        top={0}
+        left={0}
+        width="100%"
+        height="100%"
+        bg="#eaeaea" // Semi-transparent orange
+        backdropFilter="blur(100px)" // Blur effect applied
+        zIndex={-1} // Ensure it stays behind other content
+      />
+
       <Flex
         w="full"
         maxW="1200px"
         direction={{ base: "column", md: "row" }}
-        justifyContent="space-between"
+        justifyContent="space-around"
         alignItems="center"
-        px={6}
+        px={10}
       >
         <Box
           textAlign={{ base: "center", md: "left" }}
           maxW={{ base: "100%", md: "600px" }}
           mb={{ base: 6, md: 0 }}
+          // mr={{ md: 22}}
         >
-          <Heading as="h1" size="2xl" mb={4}>
-            Transform Your Career with{" "}
-            <Text as="span" color="green.400">
-              Data Expert !!!
-            </Text>
-          </Heading>
-          <Text fontSize="lg" color="gray.600" mb={6}>
-            Join our immersive bootcamp designed for aspiring Data Analytics,
-            Data Science, and Data Engineering experts. Gain the skills to
-            thrive in today&apos;s data-driven world.
+          <Text as="h1" fontSize="4xl" mb={4} fontWeight={"semibold"}>
+            Join Our Bootcamp and <br />
+            Pay After Finishing Learning
+          </Text>
+          <Text fontSize="lg" color="gray.500" mb={6}>
+            Realize your dream of becoming a Data Expert without worrying about
+            the cost. Study at the Data Expert Bootcamp and pay after graduation
+            until you get a job!*
           </Text>
           <VStack
             spacing={4}
             justifyContent={{ base: "center", md: "flex-start" }}
             alignItems={{ base: "center", md: "flex-start" }}
-            mt={{ base: 4, md: 0 }}
+            mt={{ base: 4, md: 20 }}
           >
+            <Text>Still in doubt? We are always here for you!</Text>
             <Link href="#contact">
               <Button
-                colorScheme="green"
+                _hover={{ bg: "customBlue.500" }}
+                color={"white"}
+                backgroundColor={'customBlue.500'}
                 size="lg"
                 width={{ base: "100%", md: "auto" }}
               >
                 Contact Us
               </Button>
             </Link>
-            <Link href="#timeline">
+            {/* <Link href="#timeline">
               <Button
                 variant="outline"
                 colorScheme="green"
@@ -70,7 +85,7 @@ export default function Hero() {
               >
                 Lihat Jadwal & Biaya
               </Button>
-            </Link>
+            </Link> */}
           </VStack>
         </Box>
 
@@ -78,10 +93,13 @@ export default function Hero() {
           <Image
             src="/assets/hero_section.jpg"
             alt="Hero Section"
-            boxSize={{ base: "100%", md: "470px" }}
+            boxSize={{ base: "100%", md: "550px" }}
             objectFit="cover"
-            borderRadius="2xl"
+            borderTopRadius="2xl"
+            borderBottomLeftRadius="2xl"
+            borderBottomRightRadius={"100px"}
             className={Style.heroImage}
+            border="5px double #1b1c51"
           />
         </Box>
       </Flex>

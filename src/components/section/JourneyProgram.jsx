@@ -31,7 +31,7 @@ const JourneySteps = ({ data }) => {
           fontSize={{ base: "2xl", md: "4xl" }}
           data-aos="fade-up"
         >
-          Program Journey
+          PROGRAM JOURNEY
         </Heading>
         <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
       </Flex>

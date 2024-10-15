@@ -35,10 +35,9 @@ export default function Home() {
         direction={{ base: "column", md: "row" }}
         pl={{ base: 0, md: 4 }}
         pt={{ base: 0, md: 20 }}
-        overflow={"hidden"}
       >
         <Sidebar />
-        <Box flex="1">
+        <Box flex="1" overflow={"hidden"}>
           <Box id="program-cards">
             <ProgramCards />
           </Box>

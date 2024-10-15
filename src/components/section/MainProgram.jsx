@@ -6,9 +6,9 @@ import {
   Button,
   Image,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { useEffect } from "react";
 
 const ProgramCards = () => {
   const programs = [
@@ -32,10 +32,14 @@ const ProgramCards = () => {
     },
   ];
 
+  // Dynamic background colors
+  const bgColor = useColorModeValue("gray.100", "gray.700");
+  const hoverColor = useColorModeValue("green.300", "green.500");
+
   return (
     <Box mb={20} id="mainProgram" p={{ base: 8, md: 0 }} mr={6}>
       {/* Title Text */}
-      <Flex align="center" mb={8}>
+      <Flex align="center" mb={8} justifyContent="center">
         <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
         <Heading
           textAlign="center"
@@ -53,7 +57,6 @@ const ProgramCards = () => {
       {/* Program Cards */}
       <Flex
         justifyContent={"space-around"}
-        justify="center"
         direction={["column", "row"]}
         wrap="wrap"
         spacing={5}
@@ -61,9 +64,9 @@ const ProgramCards = () => {
         {programs.map((program, index) => (
           <Flex
             key={index}
-            bg={index % 2 === 0 ? "green.200" : "white"}
+            bg={bgColor}
             p={5}
-            borderRadius="md"
+            borderRadius="xl"
             flex="1"
             maxW={{ base: "100%", sm: "300px" }}
             m={2}
@@ -88,9 +91,16 @@ const ProgramCards = () => {
           </Flex>
         ))}
       </Flex>
+
+      {/* Call to Action Button */}
       <Flex justify="center" mt={10}>
         <Link href="#kurikulum">
-          <Button colorScheme="customYellow" size="lg">
+          <Button
+            colorScheme="yellow"
+            size="lg"
+            _hover={{ bg: "yellow.400", color: "white" }}
+            transition="all 0.3s"
+          >
             Let&apos;s See Our Program
           </Button>
         </Link>

@@ -4,6 +4,7 @@ import { ClientData } from "@/data/clientData";
 const ClientLogos = () => {
   return (
     <Box
+      id="client"
       textAlign="center"
       my={10}
       backgroundColor="#eaeaea"

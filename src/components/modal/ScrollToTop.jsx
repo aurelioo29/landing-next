@@ -26,6 +26,10 @@ const ScrollToTop = () => {
       top: 0,
       behavior: "smooth",
     });
+
+    setTimeout(() => {
+      history.replaceState(null, "", "/");
+    }, 500);
   };
 
   return (
