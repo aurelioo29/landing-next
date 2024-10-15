@@ -47,11 +47,10 @@ export default function Hero() {
           textAlign={{ base: "center", md: "left" }}
           maxW={{ base: "100%", md: "600px" }}
           mb={{ base: 6, md: 0 }}
-          // mr={{ md: 22}}
         >
           <Text as="h1" fontSize="4xl" mb={4} fontWeight={"semibold"}>
-            Join Our Bootcamp and <br />
-            Pay After Finishing Learning
+            Transform Your Career with Data Analyst, Data Scientist, and Data
+            Engineer Bootcamp!
           </Text>
           <Text fontSize="lg" color="gray.500" mb={6}>
             Realize your dream of becoming a Data Expert without worrying about
@@ -69,7 +68,7 @@ export default function Hero() {
               <Button
                 _hover={{ bg: "customBlue.500" }}
                 color={"white"}
-                backgroundColor={'customBlue.500'}
+                backgroundColor={"customBlue.500"}
                 size="lg"
                 width={{ base: "100%", md: "auto" }}
               >
