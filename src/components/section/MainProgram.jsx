@@ -37,7 +37,7 @@ const ProgramCards = () => {
   const hoverColor = useColorModeValue("green.300", "green.500");
 
   return (
-    <Box mb={20} id="mainProgram" p={{ base: 8, md: 0 }} mr={6}>
+    <Box mb={20} id="mainProgram" p={{ base: 8, md: 0 }} mr={{md: 6}}>
       {/* Title Text */}
       <Flex align="center" mb={8} justifyContent="center">
         <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />

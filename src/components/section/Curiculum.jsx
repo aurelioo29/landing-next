@@ -95,7 +95,6 @@ const Curriculum = () => {
               mx={1}
               my={1}
               onClick={() => setMode(label)}
-              data-aos="fade-right"
             >
               {label}
             </Button>
@@ -140,7 +139,7 @@ const Curriculum = () => {
         lazyBehavior="keepMounted"
       >
         <TabList>
-          <Flex display={["none", "flex"]} justify="space-between">
+          <Flex display={["none", "flex"]} justify="space-around" wrap={'wrap'}>
             {dataToUse().map((tab, index) => (
               <Tab
                 key={index}

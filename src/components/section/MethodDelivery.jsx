@@ -34,7 +34,7 @@ export default function MethodDelivery() {
     <Box
       backgroundColor={"#eaeaea"}
       display="flex"
-      justifyContent="space-around"
+      justifyContent="center" // Center content for better alignment
       alignItems="center"
       textAlign="center"
       id="method"
@@ -56,7 +56,7 @@ export default function MethodDelivery() {
         </Heading>
         <Flex
           maxW="1700px"
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column", md: "column", lg: "row" }} // Ubah md ke column untuk tampilan tablet
           align="center"
         >
           <Box
@@ -78,7 +78,7 @@ export default function MethodDelivery() {
           <Box
             flex="1"
             textAlign="center"
-            ml={{ base: 0, md: 6 }}
+            ml={{ base: 0, md: 0 }} // Hapus margin di tablet untuk keselarasan
             mr={{ base: 0, md: 6 }}
             borderRadius="md"
             p={4}

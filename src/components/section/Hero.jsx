@@ -1,12 +1,4 @@
-import {
-  Box,
-  Heading,
-  Text,
-  Button,
-  VStack,
-  Image,
-  Flex,
-} from "@chakra-ui/react";
+import { Box, Text, Button, VStack, Image, Flex } from "@chakra-ui/react";
 import Style from "../../styles/Animation.module.css";
 import Link from "next/link";
 
@@ -14,14 +6,14 @@ export default function Hero() {
   return (
     <Box
       position="relative"
-      h={{ base: "auto", md: "95vh" }}
+      h={{ base: "auto", lg: "95vh" }} // Di desktop (lg) baru full height
       display="flex"
       justifyContent="center"
       alignItems="center"
       textAlign="center"
       px={4}
-      py={{ base: 8, md: 0 }}
-      overflow="hidden" // Important to avoid content overflow
+      py={{ base: 8, lg: 0 }}
+      overflow="hidden"
     >
       {/* Background Blur Effect */}
       <Box
@@ -30,25 +22,27 @@ export default function Hero() {
         left={0}
         width="100%"
         height="100%"
-        bg="#eaeaea" // Semi-transparent orange
-        backdropFilter="blur(100px)" // Blur effect applied
-        zIndex={-1} // Ensure it stays behind other content
+        bg="#eaeaea"
+        backdropFilter="blur(100px)"
+        zIndex={-1}
       />
 
       <Flex
         w="full"
         maxW="1200px"
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column", lg: "row" }} // Tablet dan HP kolom, laptop baris
         justifyContent="space-around"
         alignItems="center"
-        px={10}
+        px={4}
+        gap={{ base: 8, lg: 22 }} // Jarak antar elemen diatur
       >
+        {/* Konten Teks */}
         <Box
-          textAlign={{ base: "center", md: "left" }}
-          maxW={{ base: "100%", md: "600px" }}
-          mb={{ base: 6, md: 0 }}
+          textAlign={{ base: "center", lg: "left" }} // Di laptop align kiri
+          maxW={{ base: "100%", lg: "600px" }}
+          mb={{ base: 6, lg: 0 }}
         >
-          <Text as="h1" fontSize="4xl" mb={4} fontWeight={"semibold"}>
+          <Text as="h1" fontSize="4xl" mb={4} fontWeight="semibold">
             Transform Your Career with Data Analyst, Data Scientist, and Data
             Engineer Bootcamp!
           </Text>
@@ -59,44 +53,33 @@ export default function Hero() {
           </Text>
           <VStack
             spacing={4}
-            justifyContent={{ base: "center", md: "flex-start" }}
-            alignItems={{ base: "center", md: "flex-start" }}
-            mt={{ base: 4, md: 20 }}
+            justifyContent={{ base: "center", lg: "flex-start" }}
+            alignItems={{ base: "center", lg: "flex-start" }}
+            mt={{ base: 4, lg: 20 }}
           >
             <Text>Still in doubt? We are always here for you!</Text>
             <Link href="#contact">
               <Button
                 _hover={{ bg: "customBlue.500" }}
-                color={"white"}
-                backgroundColor={"customBlue.500"}
+                color="white"
+                backgroundColor="customBlue.500"
                 size="lg"
-                width={{ base: "100%", md: "auto" }}
+                width={{ base: "100%", lg: "auto" }} // Tombol full di HP dan auto di desktop
               >
                 Contact Us
               </Button>
             </Link>
-            {/* <Link href="#timeline">
-              <Button
-                variant="outline"
-                colorScheme="green"
-                size="lg"
-                width={{ base: "100%", md: "auto" }}
-              >
-                Lihat Jadwal & Biaya
-              </Button>
-            </Link> */}
           </VStack>
         </Box>
 
-        <Box flexShrink={0} mt={{ base: 4, md: 0 }}>
+        {/* Gambar Hero */}
+        <Box flexShrink={0} mt={{ base: 4, lg: 0 }}>
           <Image
             src="/assets/hero_section.jpg"
             alt="Hero Section"
-            boxSize={{ base: "100%", md: "550px" }}
+            boxSize={{ base: "100%", lg: "550px" }}
             objectFit="cover"
-            borderTopRadius="2xl"
-            borderBottomLeftRadius="2xl"
-            borderBottomRightRadius={"100px"}
+            borderRadius="2xl"
             className={Style.heroImage}
             border="5px double #1b1c51"
           />

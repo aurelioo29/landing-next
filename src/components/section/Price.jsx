@@ -66,7 +66,9 @@ const Price = () => {
               color={"white"}
               p={4}
               backgroundColor="customBlue.500"
-              divider={<StackDivider borderColor="gray.600" borderWidth={'5px'}/>}
+              divider={
+                <StackDivider borderColor="gray.600" borderWidth={"5px"} />
+              }
               spacing={4}
               align="stretch"
             >
@@ -80,7 +82,7 @@ const Price = () => {
               </Text>
               <Text fontSize="xl">
                 You&apos;ll get a 5% discount if you secure a job through our
-                Karya Talents team!
+                Multimatics team!
               </Text>
             </VStack>
 

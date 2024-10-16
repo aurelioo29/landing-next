@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, Image, Text, Flex } from "@chakra-ui/react";
+import { Box, Grid, Heading, Image } from "@chakra-ui/react";
 import { ClientData } from "@/data/clientData";
 
 const ClientLogos = () => {
@@ -25,25 +25,15 @@ const ClientLogos = () => {
         mb={{ base: 4, md: 6 }}
         data-aos="zoom-in"
       >
-        LIST OF MULTIMATICS
+        LIST CLIENT OF MULTIMATICS
       </Heading>
-
-      <Text
-        mb={8}
-        fontSize={{ base: "lg", md: "2xl" }}
-        color="black"
-        fontWeight="semibold"
-        data-aos="zoom-out-up"
-      >
-        PROGRAM TRAINING CLIENTS
-      </Text>
 
       <Grid
         templateColumns={{
           base: "repeat(2, 1fr)", // 2 kolom untuk mobile
           sm: "repeat(3, 1fr)", // 3 kolom untuk tablet kecil
-          md: "repeat(5, 1fr)", // 5 kolom untuk tablet besar
-          lg: "repeat(7, 1fr)", // 7 kolom untuk desktop
+          md: "repeat(4, 1fr)", // 4 kolom untuk tablet besar
+          lg: "repeat(6, 1fr)", // 6 kolom untuk desktop
         }}
         gap={6}
         justifyItems="center"
@@ -56,7 +46,7 @@ const ClientLogos = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            boxSize={{ base: "95px", md: "135px" }}
+            boxSize={{ base: "90px", sm: "110px", md: "130px" }} // Atur ukuran box lebih fleksibel
             _hover={{
               transform: "scale(1.1)",
               transition: "0.3s ease-in-out",
@@ -69,8 +59,9 @@ const ClientLogos = () => {
               src={client.logo}
               alt={client.name}
               objectFit="contain"
-              maxHeight="150px"
+              maxHeight="100px" // Sesuaikan agar tidak terlalu besar
               maxWidth="120px"
+              p={2} // Tambahkan padding untuk memberi ruang di sekitarnya
             />
           </Box>
         ))}
