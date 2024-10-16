@@ -66,7 +66,7 @@ export default function Sidebar() {
         zIndex={1000}
         w="60px" // Lebar sidebar hanya untuk ikon
         display={{ base: "none", md: "block" }} // Hanya tampil di desktop
-        color={"customYellow.500"}
+        color={"white"}
       >
         <VStack align="flex-start" spacing={4}>
           {linksData.map((link, index) => (

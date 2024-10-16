@@ -29,18 +29,18 @@ function FAQ() {
       data-aos="fade-up"
     >
       <Flex align="center" justify="center" mb={8} data-aos="zoom-in">
-        <Divider borderColor="customYellow.500" borderWidth="2px" w="30%" />
+        <Divider borderColor="white" borderWidth="2px" w="30%" />
         <Heading
           as="h1"
           fontSize={{ base: "2xl", md: "4xl" }}
-          textColor="customYellow.500"
+          textColor="white"
           mx={4}
           data-aos="fade-right"
           textAlign="center"
         >
           Frequently Asked Questions
         </Heading>
-        <Divider borderColor="customYellow.500" borderWidth="2px" w="30%" />
+        <Divider borderColor="white" borderWidth="2px" w="30%" />
       </Flex>
 
       <Box>
@@ -59,7 +59,7 @@ function FAQ() {
               justify="space-between"
               align="center"
               bg="#eaeaea"
-              _hover={{ bg: "customYellow.500" }}
+              _hover={{ bg: "customBlue.500" }}
               flexDirection={{ base: "column", md: "row" }}
               p={{ base: 3, md: 4 }}
             >
@@ -76,7 +76,7 @@ function FAQ() {
               <Icon
                 as={activeIndex === index ? FaChevronUp : FaChevronDown}
                 boxSize={{ base: 5, md: 6 }}
-                color="customYellow.500"
+                color="customGray.500"
                 data-aos="flip-up"
               />
             </Flex>

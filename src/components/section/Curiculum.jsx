@@ -61,13 +61,14 @@ const Curriculum = () => {
       <Heading
         as={"h1"}
         mb={5}
-        color={"customBlue.500"}
+        color={"customBg.500"}
         textAlign={{ base: "center", md: "center" }}
         fontSize={{ base: "2xl", md: "5xl" }}
         data-aos="fade-up"
       >
         OUR CURICULUM
       </Heading>
+
       <Text
         fontSize="sm"
         fontWeight="bold"
@@ -91,7 +92,7 @@ const Curriculum = () => {
             <Button
               key={label}
               variant={mode === label ? "solid" : "outline"}
-              colorScheme="yellow"
+              colorScheme="blue"
               mx={1}
               my={1}
               onClick={() => setMode(label)}
@@ -104,7 +105,7 @@ const Curriculum = () => {
           fontSize={"md"}
           p={2}
           borderRadius={"lg"}
-          colorScheme="yellow"
+          colorScheme="blue"
           mt={[4, 0]}
           mx={["auto", 0]}
           data-aos="fade-left"
@@ -139,11 +140,11 @@ const Curriculum = () => {
         lazyBehavior="keepMounted"
       >
         <TabList>
-          <Flex display={["none", "flex"]} justify="space-around" wrap={'wrap'}>
+          <Flex display={["none", "flex"]} justify="space-around" wrap={"wrap"}>
             {dataToUse().map((tab, index) => (
               <Tab
                 key={index}
-                _selected={{ borderBottom: "5px solid #1b1c51" }}
+                _selected={{ borderBottom: "5px solid #32abf1" }}
                 data-aos="fade-up"
               >
                 {tab.category}
@@ -177,7 +178,7 @@ const Curriculum = () => {
                             : FaChevronDown
                         }
                         boxSize={5}
-                        color="customYellow.500"
+                        color="customBlue.500"
                       />
                     </Flex>
 

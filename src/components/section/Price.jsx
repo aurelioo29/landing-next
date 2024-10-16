@@ -28,35 +28,35 @@ const Price = () => {
         >
           <Box
             p={{ base: 3, md: 10 }}
-            backgroundColor="white"
+            backgroundColor="#eaeaea"
             borderRadius="lg"
             boxShadow="xl"
             border="1px solid"
             borderColor="gray.200"
           >
             <Box
-              backgroundColor="customBlue.500"
+              backgroundColor="customBg.500"
               padding={3}
               borderTopRadius="lg"
             >
-              <Text fontSize="2xl" color="customYellow.500" fontWeight="bold">
+              <Text fontSize="2xl" color="white" fontWeight="bold">
                 DATA EXPERT PROGRAM
               </Text>
             </Box>
 
-            <Box backgroundColor="yellow.100" p={4}>
-              <Text fontSize="sm" color="orange.600" fontWeight="bold" mt={2}>
-                Only Pay Below Price, You Can Start to Learn
+            <Box backgroundColor="yellow.200" p={4}>
+              <Text fontSize="md" color="red" fontWeight="bold" mt={2}>
+                Start learning at the prices below for down payment
               </Text>
               <Text
                 fontSize={{ base: "2xl", md: "4xl" }}
-                color="customBlue.500"
+                color="black"
                 fontWeight="bold"
                 mt={2}
               >
                 Rp 2.000.000 ,-
               </Text>
-              <Text fontSize="sm" color="orange.600" fontWeight="bold" mt={2}>
+              <Text fontSize="md" color="red" fontWeight="bold" mt={2}>
                 Available partial payment, Income Share Agreement, and Pay Later
               </Text>
             </Box>
@@ -65,9 +65,9 @@ const Price = () => {
               borderBottomRadius={"lg"}
               color={"white"}
               p={4}
-              backgroundColor="customBlue.500"
+              backgroundColor="customBg.500"
               divider={
-                <StackDivider borderColor="gray.600" borderWidth={"5px"} />
+                <StackDivider borderColor="gray.400" borderWidth={"5px"} />
               }
               spacing={4}
               align="stretch"
@@ -77,7 +77,7 @@ const Price = () => {
                 the training starts!
               </Text>
               <Text fontSize="xl">
-                You&apos;ll Get another 5% discount if your attendance and
+                You&apos;ll get another 5% discount if your attendance and
                 grades are excellent!
               </Text>
               <Text fontSize="xl">
@@ -94,7 +94,7 @@ const Price = () => {
                 colorScheme="blue"
                 size={{ base: "md", md: "lg" }}
                 fontSize={{ base: "md", md: "lg" }}
-                _hover={{ bg: "customBlue.700" }}
+                _hover={{ bg: "customBg.700" }}
               >
                 Contact US
               </Button>
@@ -102,8 +102,8 @@ const Price = () => {
 
             {/* Benefit Section */}
             <Box mt={10} data-aos="fade-up">
-              <Text fontSize="2xl" fontWeight="bold" mb={6}>
-                Our Benefit Join with Us
+              <Text fontSize="2xl" fontWeight="bold" mb={6} >
+                OUR BENEFIT JOIN WITH US
               </Text>
               <Grid
                 templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}

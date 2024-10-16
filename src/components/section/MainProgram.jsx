@@ -37,13 +37,13 @@ const ProgramCards = () => {
   const hoverColor = useColorModeValue("green.300", "green.500");
 
   return (
-    <Box mb={20} id="mainProgram" p={{ base: 8, md: 0 }} mr={{md: 6}}>
+    <Box mb={20} id="mainProgram" p={{ base: 8, md: 0 }} mr={{ md: 6 }}>
       {/* Title Text */}
       <Flex align="center" mb={8} justifyContent="center">
-        <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
+        <Divider borderColor="white" borderWidth={"1.9px"} />
         <Heading
           textAlign="center"
-          color="customYellow.500"
+          color="white"
           mx={5}
           whiteSpace="nowrap"
           fontSize={{ base: "2xl", md: "4xl" }}
@@ -51,7 +51,7 @@ const ProgramCards = () => {
         >
           Our Program
         </Heading>
-        <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
+        <Divider borderColor="white" borderWidth={"1.9px"} />
       </Flex>
 
       {/* Program Cards */}
@@ -64,7 +64,7 @@ const ProgramCards = () => {
         {programs.map((program, index) => (
           <Flex
             key={index}
-            bg={bgColor}
+            bg={'#eaeaea'}
             p={5}
             borderRadius="xl"
             flex="1"
@@ -96,9 +96,10 @@ const ProgramCards = () => {
       <Flex justify="center" mt={10}>
         <Link href="#kurikulum">
           <Button
-            colorScheme="yellow"
+            color={"white"}
+            colorScheme="blue"
             size="lg"
-            _hover={{ bg: "yellow.400", color: "white" }}
+            _hover={{ bg: "blue.500", color: "white" }}
             transition="all 0.3s"
           >
             Let&apos;s See Our Program

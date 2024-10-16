@@ -22,10 +22,10 @@ const JourneySteps = ({ data }) => {
       mr={{ md: 6 }}
     >
       <Flex align="center" mb={8}>
-        <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
+        <Divider borderColor="white" borderWidth={"1.9px"} />
         <Heading
           textAlign="center"
-          color="customYellow.500"
+          color="white"
           mx={5}
           whiteSpace="nowrap"
           fontSize={{ base: "2xl", md: "4xl" }}
@@ -33,7 +33,7 @@ const JourneySteps = ({ data }) => {
         >
           PROGRAM JOURNEY
         </Heading>
-        <Divider borderColor="customYellow.500" borderWidth={"1.9px"} />
+        <Divider borderColor="white" borderWidth={"1.9px"} />
       </Flex>
 
       <Text mb={8} fontSize="lg" textAlign="center">
@@ -54,7 +54,7 @@ const JourneySteps = ({ data }) => {
       >
         <Divider
           orientation={{ base: "vertical", lg: "horizontal" }} // Vertikal di mobile dan tablet
-          borderColor="customYellow.500"
+          borderColor="customBlue.500"
           position="absolute"
           left={{ base: "50%", lg: 0 }}
           top={{ base: 0, lg: "50%" }}
@@ -76,7 +76,7 @@ const JourneySteps = ({ data }) => {
             data-aos={index % 2 === 0 ? "fade-down" : "fade-up"}
           >
             <Flex
-              bg={index % 2 === 0 ? "customYellow.500" : "#eaeaea"}
+              bg={index % 2 === 0 ? "customBlue.500" : "#eaeaea"}
               color="black"
               p={4}
               borderRadius="2xl"
@@ -109,7 +109,7 @@ const JourneySteps = ({ data }) => {
                   variant="outline"
                   colorScheme="black"
                   size="sm"
-                  _hover={{ bg: "customBlue.500", color: "white" }}
+                  _hover={{ bg: "customBg.500", color: "white" }}
                 >
                   Read More...
                 </Button>

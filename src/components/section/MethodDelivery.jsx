@@ -12,10 +12,16 @@ export default function MethodDelivery() {
 
   // Daftar URL gambar
   const images = [
-    "/assets/hero_section.jpg",
-    "/assets/analyst.png",
-    "/assets/engineer.png",
-    "/assets/scienst.png",
+    "/teach/1.jpg",
+    "/teach/2.jpg",
+    "/teach/3.jpg",
+    "/teach/4.jpg",
+    "/teach/5.jpg",
+    "/teach/6.jpg",
+    "/teach/7.jpg",
+    "/teach/8.jpg",
+    "/teach/9.jpg",
+    "/teach/10.jpg",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -34,7 +40,7 @@ export default function MethodDelivery() {
     <Box
       backgroundColor={"#eaeaea"}
       display="flex"
-      justifyContent="center" // Center content for better alignment
+      justifyContent="center"
       alignItems="center"
       textAlign="center"
       id="method"
@@ -49,7 +55,7 @@ export default function MethodDelivery() {
           as="h2"
           size="2xl"
           mb={8}
-          color={"customBlue.500"}
+          color={"customBg.500"}
           data-aos="fade-up"
         >
           METHOD OF DELIVERY
@@ -60,18 +66,17 @@ export default function MethodDelivery() {
           align="center"
         >
           <Box
-            pt={{ base: 4, md: 0 }}
-            mb={{ base: 4, md: 0 }}
+            mb={{ base: 2, md: 0 }}
             flex="1"
             mr={{ base: 0, md: 6 }}
             data-aos="fade-right"
+            borderRadius={"2xl"}
           >
             <Image
               src={images[currentImageIndex]}
               alt="Hero Section"
-              boxSize="500px"
-              objectFit="cover"
-              borderRadius="2xl"
+              boxSize={{ base: "300px", md: "560px", lg: "720px" }}
+              objectFit="contain"
             />
           </Box>
 
@@ -84,9 +89,10 @@ export default function MethodDelivery() {
             p={4}
             data-aos="fade-left"
           >
-            <VStack spacing={4} align="center">
+            <VStack spacing={10} align="center">
               {methods.map((method, index) => (
                 <Box
+                  fontWeight={"bold"}
                   key={index}
                   bg={index % 2 === 0 ? "customBlue.500" : "gray.100"}
                   color={index % 2 === 0 ? "white" : "black"}

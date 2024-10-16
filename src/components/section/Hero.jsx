@@ -60,9 +60,9 @@ export default function Hero() {
             <Text>Still in doubt? We are always here for you!</Text>
             <Link href="#contact">
               <Button
-                _hover={{ bg: "customBlue.500" }}
+                _hover={{ bg: "customBg.500" }}
                 color="white"
-                backgroundColor="customBlue.500"
+                backgroundColor="customBg.500"
                 size="lg"
                 width={{ base: "100%", lg: "auto" }} // Tombol full di HP dan auto di desktop
               >
@@ -81,7 +81,7 @@ export default function Hero() {
             objectFit="cover"
             borderRadius="2xl"
             className={Style.heroImage}
-            border="5px double #1b1c51"
+            border="5px double #222222"
           />
         </Box>
       </Flex>

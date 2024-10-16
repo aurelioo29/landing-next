@@ -20,7 +20,7 @@ const ClientLogos = () => {
       <Heading
         as="h1"
         fontSize={{ base: "3xl", md: "5xl" }}
-        textColor="customBlue.500"
+        textColor="customBg.500"
         mx={4}
         mb={{ base: 4, md: 6 }}
         data-aos="zoom-in"

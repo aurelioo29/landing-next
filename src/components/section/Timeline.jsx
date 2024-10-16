@@ -134,14 +134,10 @@ export default function Timeline() {
   return (
     <Box id="timeline" mr={{ md: 6 }} mb={10} p={{ base: 4, md: 6 }}>
       <Flex align="center" mb={8}>
-        <Divider
-          borderColor="customYellow.500"
-          borderWidth={"1.9px"}
-          data-aos="fade-up"
-        />
+        <Divider borderColor="white" borderWidth={"1.9px"} data-aos="fade-up" />
         <Heading
           textAlign="center"
-          color="customYellow.500"
+          color="white"
           mx={5}
           whiteSpace="nowrap"
           fontSize={{ base: "2xl", md: "4xl" }}
@@ -149,11 +145,7 @@ export default function Timeline() {
         >
           TIMELINE
         </Heading>
-        <Divider
-          borderColor="customYellow.500"
-          borderWidth={"1.9px"}
-          data-aos="fade-up"
-        />
+        <Divider borderColor="white" borderWidth={"1.9px"} data-aos="fade-up" />
       </Flex>
 
       <Text
@@ -166,7 +158,7 @@ export default function Timeline() {
         Explore the class schedule and find the one that suits you best!
       </Text>
 
-      <Flex justify="center" mb={8} gap={4} wrap="wrap" data-aos="fade-up">
+      {/* <Flex justify="center" mb={8} gap={4} wrap="wrap" data-aos="fade-up">
         {[
           "Data Science Expert",
           "Data Analyst Expert",
@@ -174,36 +166,32 @@ export default function Timeline() {
         ].map((category) => (
           <Button
             key={category}
-            bg={selectedCategory === category ? "yellow.400" : "white"}
+            bg={'blue.500'}
             color="black"
             border="1px solid"
-            borderColor={
-              selectedCategory === category ? "yellow.400" : "gray.300"
-            }
+            borderColor={"blue.500"}
             onClick={() => setSelectedCategory(category)}
-            _hover={{
-              bg: selectedCategory === category ? "yellow.300" : "gray.100",
-            }}
+            _hover={'blue.500'}
             fontSize={{ base: "sm", md: "md" }}
           >
             {category}
           </Button>
         ))}
-      </Flex>
+      </Flex> */}
 
       <TableContainer
         maxWidth={{ md: "900px" }}
         mx="auto"
         borderRadius="md"
         p={3}
-        bg="white"
+        bg="#eaeaea"
         boxShadow="lg"
         mb={10}
-        overflowX="auto" // Agar bisa di-scroll horizontal
+        overflowX="auto"
         data-aos="zoom-in"
       >
         <Table variant="simple" size="md">
-          <Thead bg="customBlue.500" data-aos="fade-down">
+          <Thead bg="customBg.500" data-aos="fade-down">
             <Tr>
               <Th color="white" textAlign="center">
                 Tanggal
@@ -218,14 +206,14 @@ export default function Timeline() {
               <Tr key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                 <Td
                   textAlign="center"
-                  bgColor={index % 2 === 1 ? "customYellow.500" : "#fff"}
+                  bgColor={index % 2 === 1 ? "customBlue.500" : "#fff"}
                   fontWeight={index % 2 === 1 ? "bold" : "normal"}
                 >
                   {item.date}
                 </Td>
                 <Td
                   textAlign="center"
-                  bgColor={index % 2 === 1 ? "customYellow.500" : "#fff"}
+                  bgColor={index % 2 === 1 ? "customBlue.500" : "#fff"}
                   fontWeight={index % 2 === 1 ? "bold" : "normal"}
                 >
                   {item.event}
