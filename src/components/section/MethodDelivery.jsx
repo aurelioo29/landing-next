@@ -12,16 +12,16 @@ export default function MethodDelivery() {
 
   // Daftar URL gambar
   const images = [
-    "/assets/teach/1.jpg",
-    "/assets/teach/2.jpg",
-    "/assets/teach/3.jpg",
-    "/assets/teach/4.jpg",
-    "/assets/teach/5.jpg",
-    "/assets/teach/6.jpg",
-    "/assets/teach/7.jpg",
-    "/assets/teach/8.jpg",
-    "/assets/teach/9.jpg",
-    "/assets/teach/10.jpg",
+    "/assets/teach/1.JPG",
+    "/assets/teach/2.JPG",
+    "/assets/teach/3.JPG",
+    "/assets/teach/4.JPG",
+    "/assets/teach/5.JPG",
+    "/assets/teach/6.JPG",
+    "/assets/teach/7.JPG",
+    "/assets/teach/8.JPG",
+    "/assets/teach/9.JPG",
+    "/assets/teach/10.JPG",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
