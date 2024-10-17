@@ -16,7 +16,7 @@ const JourneySteps = ({ data }) => {
   return (
     <Box
       color="white"
-      p={{ base: 4, md: 6 }}
+      p={{ base: 4, md: 2 }}
       mb={20}
       id="journey"
       mr={{ md: 6 }}
@@ -67,8 +67,8 @@ const JourneySteps = ({ data }) => {
             key={index}
             direction="column"
             align="center"
-            minW="220px"
-            maxW="220px"
+            // minW="220px"
+            // maxW="220px"
             mx={{ base: 0, lg: 4 }}
             position="relative"
             onClick={() => setStep(step)}
@@ -86,7 +86,7 @@ const JourneySteps = ({ data }) => {
               height="200px"
               transform={
                 index % 2 === 0
-                  ? { base: "none", lg: "translateY(-30%)" } // Zig-zag pada tampilan laptop
+                  ? { base: "none", lg: "translateY(-30%)" }
                   : { base: "none", lg: "translateY(30%)" }
               }
             >
