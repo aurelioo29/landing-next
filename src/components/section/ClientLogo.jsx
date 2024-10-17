@@ -25,15 +25,15 @@ const ClientLogos = () => {
         mb={{ base: 4, md: 6 }}
         data-aos="zoom-in"
       >
-        LIST CLIENT OF MULTIMATICS
+        DAFTAR KLIEN MULTIMATICS
       </Heading>
 
       <Grid
         templateColumns={{
-          base: "repeat(2, 1fr)", // 2 kolom untuk mobile
-          sm: "repeat(3, 1fr)", // 3 kolom untuk tablet kecil
-          md: "repeat(4, 1fr)", // 4 kolom untuk tablet besar
-          lg: "repeat(6, 1fr)", // 6 kolom untuk desktop
+          base: "repeat(2, 1fr)",
+          sm: "repeat(3, 1fr)",
+          md: "repeat(4, 1fr)",
+          lg: "repeat(6, 1fr)",
         }}
         gap={6}
         justifyItems="center"
@@ -46,7 +46,7 @@ const ClientLogos = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            boxSize={{ base: "90px", sm: "110px", md: "130px" }} // Atur ukuran box lebih fleksibel
+            boxSize={{ base: "90px", sm: "110px", md: "130px" }} 
             _hover={{
               transform: "scale(1.1)",
               transition: "0.3s ease-in-out",
@@ -59,9 +59,9 @@ const ClientLogos = () => {
               src={client.logo}
               alt={client.name}
               objectFit="contain"
-              maxHeight="100px" // Sesuaikan agar tidak terlalu besar
+              maxHeight="100px" 
               maxWidth="120px"
-              p={2} // Tambahkan padding untuk memberi ruang di sekitarnya
+              p={2}
             />
           </Box>
         ))}

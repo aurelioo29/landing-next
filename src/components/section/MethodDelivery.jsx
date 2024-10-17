@@ -1,29 +1,9 @@
 import { Box, Flex, Text, Heading, Image, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { methods } from "@/data/methodDelivery";
+import { images } from "@/data/imageDelivery";
 
 export default function MethodDelivery() {
-  const methods = [
-    "Lectures and Tutorials: Comprehensive sessions covering theoretical concepts.",
-    "Hands-on Labs: Practical sessions to implement the learned concepts.",
-    "Projects: Real-world projects to apply data engineering techniques in practical scenarios.",
-    "Quizzes and Exams: Periodic assessments to evaluate understanding and progress.",
-    "Peer Discussions and Support: Interactive sessions for collaborative learning.",
-  ];
-
-  // Daftar URL gambar
-  const images = [
-    "/assets/teach/1.JPG",
-    "/assets/teach/2.JPG",
-    "/assets/teach/3.JPG",
-    "/assets/teach/4.JPG",
-    "/assets/teach/5.JPG",
-    "/assets/teach/6.JPG",
-    "/assets/teach/7.JPG",
-    "/assets/teach/8.JPG",
-    "/assets/teach/9.JPG",
-    "/assets/teach/10.JPG",
-  ];
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -58,11 +38,11 @@ export default function MethodDelivery() {
           color={"customBg.500"}
           data-aos="fade-up"
         >
-          METHOD OF DELIVERY
+          PENYAMPAIAN MATERI
         </Heading>
         <Flex
           maxW="1700px"
-          direction={{ base: "column", md: "column", lg: "row" }} // Ubah md ke column untuk tampilan tablet
+          direction={{ base: "column", md: "column", lg: "row" }}
           align="center"
         >
           <Box
@@ -83,7 +63,7 @@ export default function MethodDelivery() {
           <Box
             flex="1"
             textAlign="center"
-            ml={{ base: 0, md: 0 }} // Hapus margin di tablet untuk keselarasan
+            ml={{ base: 0, md: 0 }}
             mr={{ base: 0, md: 6 }}
             borderRadius="md"
             p={4}

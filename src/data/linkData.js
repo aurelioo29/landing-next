@@ -9,11 +9,11 @@ import {
 } from "react-icons/fa";
 
 export const linksData = [
-  { href: "#mainProgram", label: "Our Program", icon: FaHome },
-  { href: "#method", label: "Method Delivery", icon: FaUserTie },
-  { href: "#journey", label: "Journey Program", icon: FaRoad },
-  { href: "#kurikulum", label: "Curriculum", icon: FaBook },
-  { href: "#timeline", label: "Timeline & Price", icon: FaClock },
-  { href: "#client", label: "Clients", icon: FaUsers },
+  { href: "#mainProgram", label: "Program", icon: FaHome },
+  { href: "#method", label: "Penyampain Materi", icon: FaUserTie },
+  { href: "#journey", label: "Program Pembelajaran", icon: FaRoad },
+  { href: "#kurikulum", label: "Kurikulum", icon: FaBook },
+  { href: "#timeline", label: "Jadwal & Harga", icon: FaClock },
+  { href: "#client", label: "Client", icon: FaUsers },
   { href: "#faq", label: "FAQ", icon: FaQuestionCircle },
 ];

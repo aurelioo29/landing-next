@@ -1,33 +1,33 @@
 export const faqs = [
   {
     question:
-      "What prior knowledge do I need before enrolling in this program?",
+      "Apa pengetahuan dasar yang perlu saya miliki sebelum mendaftar program ini?",
     answer:
-      "A basic understanding of data concepts is essential for success in this program. Familiarity with terms and principles related to data will help you grasp the course material more effectively.",
+      "Pemahaman dasar tentang konsep data sangat penting untuk sukses dalam program ini. Familiaritas dengan istilah dan prinsip terkait data akan membantu Anda memahami materi kursus dengan lebih efektif.",
   },
   {
-    question: "What tools will I learn?",
+    question: "Alat apa saja yang akan saya pelajari?",
     answer:
-      "You will learn Python, SQL, data visualization tools, and much more.",
+      "Anda akan mempelajari Python, SQL, alat visualisasi data, dan banyak lagi.",
   },
   {
-    question: "How long does the bootcamp last?",
-    answer: "The bootcamp lasts for 12 weeks of intensive learning.",
+    question: "Berapa lama bootcamp ini berlangsung?",
+    answer: "Bootcamp berlangsung selama 7 minggu pembelajaran intensif.",
   },
   {
-    question: "Will I receive a certificate?",
-    answer:
-      "Yes, upon completion of the course, you will receive a certificate.",
-  },
-  {
-    question: "Do I need to have programming skills to participate?",
-    answer:
-      "While basic programming and algorithm knowledge can be beneficial, they are not mandatory for enrollment. However, being open to learning programming concepts will enhance your experience.",
+    question: "Apakah saya akan menerima sertifikat?",
+    answer: "Ya, setelah menyelesaikan kursus, Anda akan menerima sertifikat.",
   },
   {
     question:
-      "What personal qualities should I have to succeed in this program?",
+      "Apakah saya perlu memiliki keterampilan pemrograman untuk ikut serta?",
     answer:
-      "Commitment and perseverance are crucial. Data-related fields can be challenging, and having the determination to overcome obstacles will greatly contribute to your success in this program.",
+      "Walaupun pengetahuan dasar tentang pemrograman dan algoritma dapat bermanfaat, itu tidak wajib untuk pendaftaran. Namun, terbuka untuk mempelajari konsep pemrograman akan memperkaya pengalaman Anda.",
+  },
+  {
+    question:
+      "Kualitas pribadi apa yang saya butuhkan untuk sukses dalam program ini?",
+    answer:
+      "Komitmen dan ketekunan sangatlah penting. Bidang yang terkait dengan data bisa menantang, dan memiliki tekad untuk mengatasi hambatan akan sangat membantu kesuksesan Anda dalam program ini.",
   },
 ];

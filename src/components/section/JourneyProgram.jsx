@@ -31,29 +31,28 @@ const JourneySteps = ({ data }) => {
           fontSize={{ base: "2xl", md: "4xl" }}
           data-aos="fade-up"
         >
-          PROGRAM JOURNEY
+          PROGRAM PEMBELAJARAN
         </Heading>
         <Divider borderColor="white" borderWidth={"1.9px"} />
       </Flex>
 
       <Text mb={8} fontSize="lg" textAlign="center">
-        Mulai karirmu di bidang data sebagai Data Analyst atau Data Scientist
-        dengan program training bootcamp selama 12-14 minggu dan dapatkan
-        fasilitas koneksi kerja seumur hidup ke 1.000+ perusahaan hiring
-        partner.
+        Mulai karirmu di bidang data sebagai Data Analyst, Data Scientist hingga
+        Data Engineer Expert dengan program training bootcamp selama 7 minggu
+        dan dapatkan fasilitas koneksi kerja ke 500+ perusahaan hiring partner.
       </Text>
 
       <Flex
         position="relative"
-        justifyContent={{ base: "center", lg: "space-between" }} // "center" untuk HP dan Tablet, "space-between" untuk Laptop
+        justifyContent={{ base: "center", lg: "space-between" }} 
         alignItems="center"
-        wrap={{ base: "wrap", lg: "nowrap" }} // Responsif wrap di mobile dan tablet
-        direction={{ base: "column", lg: "row" }} // Kolom di mobile dan tablet, baris di laptop
-        gap={{ base: 8, lg: 0 }} // Jarak antar item di mobile
+        wrap={{ base: "wrap", lg: "nowrap" }} 
+        direction={{ base: "column", lg: "row" }} 
+        gap={{ base: 8, lg: 0 }} 
         minHeight="350px"
       >
         <Divider
-          orientation={{ base: "vertical", lg: "horizontal" }} // Vertikal di mobile dan tablet
+          orientation={{ base: "vertical", lg: "horizontal" }} 
           borderColor="customBlue.500"
           position="absolute"
           left={{ base: "50%", lg: 0 }}

@@ -66,7 +66,7 @@ const Curriculum = () => {
         fontSize={{ base: "2xl", md: "5xl" }}
         data-aos="fade-up"
       >
-        OUR CURICULUM
+        KURIKULUM
       </Heading>
 
       <Text
@@ -76,8 +76,7 @@ const Curriculum = () => {
         textAlign={{ base: "center", md: "center" }}
         data-aos="fade-up"
       >
-        Implementing Trusted Curriculum from the Industrial World and Staying
-        Updated
+        Menerapkan Kurikulum Terpercaya dari Dunia Industri dan Tetap Terkini
       </Text>
 
       <Flex
@@ -110,7 +109,7 @@ const Curriculum = () => {
           mx={["auto", 0]}
           data-aos="fade-left"
         >
-          {totalLessons} Lessons
+          {totalLessons} Materi
         </Badge>
       </Flex>
 

@@ -1,44 +1,44 @@
 export const journeyData = [
   {
-    title: "Step 1: Registration",
+    title: "Langkah 1: Registrasi",
     image: "/journey/step1.png",
     detail:
-      "At the beginning of the program, registration is opened for participants who want to register for training. Registration can be done by sending invitations, posting announcements on internal communication channels, or creating an online registration form. Next, participants provide basic information and express interest in participating in the program.",
+      "Di awal program, registrasi dibuka untuk peserta yang ingin mengikuti pelatihan. Pendaftaran dilakukan melalui undangan, pengumuman di kanal komunikasi internal, atau formulir pendaftaran online. Peserta memberikan informasi dasar dan menyatakan minat untuk berpartisipasi.",
   },
   {
-    title: "Step 2 : Pre-Test",
+    title: "Langkah 2: Pre-Test",
     image: "/journey/step2.png",
     detail:
-      "Before the official training begins, participants take a pre-test to assess their basic knowledge and skills related to the training topics. The pre-test helps the trainer understand each participant's starting point and adjust the training content accordingly.",
+      "Sebelum pelatihan dimulai, peserta mengikuti pre-test untuk mengukur pengetahuan dan keterampilan awal mereka. Hasil pre-test membantu instruktur menyesuaikan materi pelatihan.",
   },
   {
-    title: "Step 3 : Bootcamp",
+    title: "Langkah 3: Bootcamp",
     image: "/journey/step3.png",
     detail:
-      "The main program of the journey on this program section. This could span over multiple sessions or days, depending on the complexity of the material and the availability of participants. During the training program, participants engage in various learning activities, such as lectures, workshops, group discussions, and hands-on exercises. Trainers deliver the content, provide guidance, and facilitate discussions to ensure that participants grasp the concepts and skills being taught.",
+      "Tahap utama dari program ini, bisa berlangsung beberapa sesi atau hari, tergantung kompleksitas materi dan ketersediaan peserta. Peserta mengikuti kegiatan pembelajaran seperti kuliah, workshop, diskusi kelompok, dan latihan praktik.",
   },
   {
-    title: "Step 4 : Quiz in Class",
+    title: "Langkah 4: Kuis di Kelas",
     image: "/journey/step4.png",
     detail:
-      "Participants will receive a quiz, the purpose of which is to reinforce learning, measure participant understanding, and the quiz is held in class. This quiz can be written or oral, covering the main topics discussed in the training session.",
+      "Peserta mengikuti kuis di kelas untuk memperkuat pembelajaran dan mengukur pemahaman mereka. Kuis ini mencakup topik utama yang dibahas selama sesi pelatihan.",
   },
   {
-    title: "Step 5 : Post Test",
+    title: "Langkah 5: Post-Test",
     image: "/journey/step5.png",
     detail:
-      "After completing the training program, participants take a post-test to evaluate their knowledge and skills gained throughout the training. The post-test is similar to the pre-test but focuses on measuring the progress and improvement achieved as a result of the training. By comparing pre-test and post-test scores, you can assess the effectiveness of the training program and measure the learning outcomes.",
+      "Setelah pelatihan selesai, peserta mengikuti post-test untuk mengukur pengetahuan dan keterampilan yang diperoleh. Hasil post-test dibandingkan dengan pre-test untuk menilai kemajuan peserta.",
   },
   {
-    title: "Step 6: Capstone Project",
+    title: "Langkah 6: Proyek Akhir",
     image: "/journey/step6.png",
     detail:
-      "Following the completion of the training program and assessments, participants engage in a capstone project. The capstone project allows participants to apply the knowledge and skills they've acquired during the training to a real-world scenario or problem relevant to their work or industry. Participants work individually or in groups to conceptualize, plan, execute, and present their capstone projects, demonstrating their understanding and ability to apply the training concepts in practical",
+      "Setelah pelatihan dan evaluasi, peserta mengerjakan proyek akhir. Proyek ini memungkinkan peserta menerapkan pengetahuan dan keterampilan yang diperoleh pada situasi nyata yang relevan dengan industri mereka.",
   },
   {
-    title: "Step 7: Assessment",
+    title: "Langkah 7: Penilaian",
     image: "/journey/step7.png",
     detail:
-      "As part of our commitment to ensuring participants' career success, the Data Analytics Expert Bootcamp focuses not only on learning and skill development, but also on job placement after the program is completed. With this comprehensive approach, the Data Analytics Expert Bootcamp ensures that each participant not only acquires the necessary data analysis skills, but also gets full support in starting and developing their careers at reputable companies.",
+      "Selain pengembangan keterampilan, program ini juga mendukung penempatan kerja setelah selesai. Peserta mendapatkan dukungan penuh dalam memulai dan mengembangkan karier mereka di perusahaan ternama.",
   },
 ];

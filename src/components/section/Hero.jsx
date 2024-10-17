@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <Box
       position="relative"
-      h={{ base: "auto", lg: "95vh" }} // Di desktop (lg) baru full height
+      h={{ base: "auto", lg: "95vh" }}
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -30,26 +30,26 @@ export default function Hero() {
       <Flex
         w="full"
         maxW="1200px"
-        direction={{ base: "column", lg: "row" }} // Tablet dan HP kolom, laptop baris
+        direction={{ base: "column", lg: "row" }}
         justifyContent="space-around"
         alignItems="center"
         px={4}
-        gap={{ base: 8, lg: 22 }} // Jarak antar elemen diatur
+        gap={{ base: 8, lg: 22 }}
       >
         {/* Konten Teks */}
         <Box
-          textAlign={{ base: "center", lg: "left" }} // Di laptop align kiri
+          textAlign={{ base: "center", lg: "left" }} 
           maxW={{ base: "100%", lg: "600px" }}
           mb={{ base: 6, lg: 0 }}
         >
           <Text as="h1" fontSize="4xl" mb={4} fontWeight="semibold">
-            Transform Your Career with Data Analyst, Data Scientist, and Data
-            Engineer Bootcamp!
+            Ubah Karier Anda dengan Bootcamp Data Analyst, Data Scientist, serta
+            Data Engineer Expert!
           </Text>
           <Text fontSize="lg" color="gray.500" mb={6}>
-            Realize your dream of becoming a Data Expert without worrying about
-            the cost. Study at the Data Expert Bootcamp and pay after graduation
-            until you get a job!*
+            Wujudkan impian Anda untuk menjadi Data Expert tanpa perlu khawatir
+            tentang biaya. Belajar di sini bisa bayar setelah lulus sampai Anda
+            mendapat pekerjaan!*
           </Text>
           <VStack
             spacing={4}
@@ -57,16 +57,16 @@ export default function Hero() {
             alignItems={{ base: "center", lg: "flex-start" }}
             mt={{ base: 4, lg: 20 }}
           >
-            <Text>Still in doubt? We are always here for you!</Text>
+            <Text>Masi ragu? Kami selalu ada untuk anda!</Text>
             <Link href="#contact">
               <Button
                 _hover={{ bg: "customBg.500" }}
                 color="white"
                 backgroundColor="customBg.500"
                 size="lg"
-                width={{ base: "100%", lg: "auto" }} // Tombol full di HP dan auto di desktop
+                width={{ base: "100%", lg: "auto" }}
               >
-                Contact Us
+                Kontak Kami
               </Button>
             </Link>
           </VStack>

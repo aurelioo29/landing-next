@@ -14,117 +14,7 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 import { useState } from "react";
-
-const timelineData = {
-  "Data Science Expert": [
-    {
-      date: "04 November 2024 - 08 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "09 November 2024", event: "First Meeting Offline" },
-    {
-      date: "11 November 2024 - 15 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "16 November 2024", event: "Second Meeting Offline" },
-    {
-      date: "18 November 2024 - 22 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "23 November 2024", event: "Third Meeting Offline" },
-    {
-      date: "25 November 2024 - 29 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "30 November 2024", event: "Fourth Meeting Offline" },
-    {
-      date: "02 December 2024 - 06 December 2024",
-      event: "Self Learning Online",
-    },
-    { date: "07 December 2024", event: "Fifth Meeting Offline" },
-    {
-      date: "09 December 2024 - 13 December 2024",
-      event: "Self Learning Online",
-    },
-    { date: "14 December 2024", event: "Sixth Meeting Offline" },
-    {
-      date: "16 December 2024 & 17 December 2024",
-      event: "Capstone Project ",
-    },
-  ],
-  "Data Analyst Expert": [
-    {
-      date: "04 November 2024 - 08 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "09 November 2024", event: "First Meeting Offline" },
-    {
-      date: "11 November 2024 - 15 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "16 November 2024", event: "Second Meeting Offline" },
-    {
-      date: "18 November 2024 - 22 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "23 November 2024", event: "Third Meeting Offline" },
-    {
-      date: "25 November 2024 - 29 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "30 November 2024", event: "Fourth Meeting Offline" },
-    {
-      date: "02 December 2024 - 06 December 2024",
-      event: "Self Learning Online",
-    },
-    { date: "07 December 2024", event: "Fifth Meeting Offline" },
-    {
-      date: "09 December 2024 - 13 December 2024",
-      event: "Self Learning Online",
-    },
-    { date: "14 December 2024", event: "Sixth Meeting Offline" },
-    {
-      date: "16 December 2024 & 17 December 2024",
-      event: "Capstone Project ",
-    },
-  ],
-  "Data Engineer Expert": [
-    {
-      date: "04 November 2024 - 08 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "09 November 2024", event: "First Meeting Offline" },
-    {
-      date: "11 November 2024 - 15 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "16 November 2024", event: "Second Meeting Offline" },
-    {
-      date: "18 November 2024 - 22 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "23 November 2024", event: "Third Meeting Offline" },
-    {
-      date: "25 November 2024 - 29 November 2024",
-      event: "Self Learning Online",
-    },
-    { date: "30 November 2024", event: "Fourth Meeting Offline" },
-    {
-      date: "02 December 2024 - 06 December 2024",
-      event: "Self Learning Online",
-    },
-    { date: "07 December 2024", event: "Fifth Meeting Offline" },
-    {
-      date: "09 December 2024 - 13 December 2024",
-      event: "Self Learning Online",
-    },
-    { date: "14 December 2024", event: "Sixth Meeting Offline" },
-    {
-      date: "16 December 2024 & 17 December 2024",
-      event: "Capstone Project ",
-    },
-  ],
-};
+import { timelineData } from "@/data/timelineData";
 
 export default function Timeline() {
   const [selectedCategory, setSelectedCategory] = useState(
@@ -143,7 +33,7 @@ export default function Timeline() {
           fontSize={{ base: "2xl", md: "4xl" }}
           data-aos="fade-up"
         >
-          TIMELINE
+          JADWAL PELAKSANAAN
         </Heading>
         <Divider borderColor="white" borderWidth={"1.9px"} data-aos="fade-up" />
       </Flex>
@@ -155,7 +45,7 @@ export default function Timeline() {
         textAlign="center"
         data-aos="fade-up"
       >
-        Explore the class schedule and find the one that suits you best!
+        Jelajahi jadwal kelas dan temukan yang paling sesuai untuk Anda!
       </Text>
 
       {/* <Flex justify="center" mb={8} gap={4} wrap="wrap" data-aos="fade-up">

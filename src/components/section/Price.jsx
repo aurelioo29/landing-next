@@ -9,12 +9,8 @@ import {
   VStack,
   StackDivider,
 } from "@chakra-ui/react";
-import {
-  HiDocumentText,
-  HiChatAlt2,
-  HiBriefcase,
-  HiAcademicCap,
-} from "react-icons/hi";
+import Link from "next/link";
+import { benefits } from "@/data/benefitData";
 
 const Price = () => {
   return (
@@ -40,13 +36,13 @@ const Price = () => {
               borderTopRadius="lg"
             >
               <Text fontSize="2xl" color="white" fontWeight="bold">
-                DATA EXPERT PROGRAM
+                HARGA PROGRAM DATA EXPERT
               </Text>
             </Box>
 
             <Box backgroundColor="yellow.200" p={4}>
               <Text fontSize="md" color="red" fontWeight="bold" mt={2}>
-                Start learning at the prices below for down payment
+                Mulailah belajar dengan harga di bawah ini untuk pembayaran awal
               </Text>
               <Text
                 fontSize={{ base: "2xl", md: "4xl" }}
@@ -57,7 +53,8 @@ const Price = () => {
                 Rp 2.000.000 ,-
               </Text>
               <Text fontSize="md" color="red" fontWeight="bold" mt={2}>
-                Available partial payment, Income Share Agreement, and Pay Later
+                Tersedia partial payment, Income Share Agreement, serta Pay
+                Later setelah kerja
               </Text>
             </Box>
 
@@ -73,37 +70,39 @@ const Price = () => {
               align="stretch"
             >
               <Text fontSize="xl">
-                You&apos;ll get a 5% discount if you pay the full payment before
-                the training starts!
+                Anda akan mendapatkan diskon 5% jika Anda membayar penuh sebelum
+                pelatihan dimulai!
               </Text>
               <Text fontSize="xl">
-                You&apos;ll get another 5% discount if your attendance and
-                grades are excellent!
+                Anda akan mendapatkan diskon 5% lagi jika kehadiran dan nilai
+                Anda sangat baik!
               </Text>
               <Text fontSize="xl">
-                You&apos;ll get a 5% discount if you secure a job through our
-                Multimatics team!
+                Anda akan mendapatkan diskon 5% jika Anda mendapatkan pekerjaan
+                melalui tim Multimatics kami!
               </Text>
             </VStack>
 
             <Box mt={6} textAlign="center">
               <Text color="red.500" fontWeight="bold" mb={4}>
-                Registration closes on 26 October 2024
+                Pendaftaran ditutup pada tanggal 26 Oktober 2024
               </Text>
-              <Button
-                colorScheme="blue"
-                size={{ base: "md", md: "lg" }}
-                fontSize={{ base: "md", md: "lg" }}
-                _hover={{ bg: "customBg.700" }}
-              >
-                Contact US
-              </Button>
+              <Link href={"#contact"}>
+                <Button
+                  colorScheme="blue"
+                  size={{ base: "md", md: "lg" }}
+                  fontSize={{ base: "md", md: "lg" }}
+                  _hover={{ bg: "customBg.700" }}
+                >
+                  Kontak Kami
+                </Button>
+              </Link>
             </Box>
 
             {/* Benefit Section */}
             <Box mt={10} data-aos="fade-up">
-              <Text fontSize="2xl" fontWeight="bold" mb={6} >
-                OUR BENEFIT JOIN WITH US
+              <Text fontSize="2xl" fontWeight="bold" mb={6}>
+                MANFAAT BERGABUNG DENGAN KAMI
               </Text>
               <Grid
                 templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
@@ -133,12 +132,5 @@ const Price = () => {
     </Box>
   );
 };
-
-const benefits = [
-  { icon: HiBriefcase, text: "Relevant Data Training Curriculum" },
-  { icon: HiDocumentText, text: "Easy to Get Job" },
-  { icon: HiChatAlt2, text: "Career Support" },
-  { icon: HiAcademicCap, text: "Free Access Platform Course Learning" },
-];
 
 export default Price;
